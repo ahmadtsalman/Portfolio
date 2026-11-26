@@ -28,8 +28,10 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - name: Build
         run: |
+          # A custom domain (public/CNAME) or a USERNAME.github.io repo serves
+          # from the root "/". Any other repo serves from /repo-name/.
           REPO="${GITHUB_REPOSITORY#*/}"
-          if [[ "$REPO" == *.github.io ]]; then
+          if [[ -f public/CNAME || "$REPO" == *.github.io ]]; then
             pnpm build
           else
             FIGMA_PUBLIC_URL="/$REPO" pnpm build
