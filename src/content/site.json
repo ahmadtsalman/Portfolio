@@ -1,0 +1,167 @@
+{
+  "_note": "Edit the text on the portfolio here. Resume text mirrors public/Ahmad-Salman-Resume.pdf.",
+  "name": "Ahmad Salman",
+  "hero": {
+    "name": [
+      "Ahmad",
+      "Salman"
+    ],
+    "line": "Mechanical Engineering, Design, Rapid Prototyping . Integration and Innovation"
+  },
+  "about": {
+    "heading": "About Me",
+    "paragraphs": [
+      "Hello, my name is Ahmad Salman. I am aquiring a Masters of Integrated Innovative Products and Services program with my previous background being in Mechanical Engineering with a minor in Design at Carnegie Mellon. I study complex and diverse topics hoping to combine engineering and design into better mechanical design.",
+      "I want to be on the forefront of new waves of technology and work with brilliant minds to usher in transformative technologies that have helped change my life."
+    ]
+  },
+  "contact": {
+    "email": "ahmadsal@andrew.cmu.edu",
+    "linkedin": "https://www.linkedin.com/in/ahmad-t-salman",
+    "medium": "https://medium.com/@ahmadsal"
+  },
+  "resume": {
+    "file": "/Ahmad-Salman-Resume.pdf",
+    "contact": [
+      "ahmadsal@andrew.cmu.edu",
+      "646-963-4014",
+      "https://ahmadsal.myportfolio.com"
+    ],
+    "sections": [
+      {
+        "title": "Education",
+        "entries": [
+          {
+            "title": "Carnegie Mellon University",
+            "right": "Pittsburgh, PA | QPA 3.78",
+            "lines": [
+              {
+                "left": "Master of Innovative Integrative Products and Services",
+                "right": "May 2027"
+              },
+              {
+                "left": "Bachelor of Science in Mechanical Engineering, Minor in Design",
+                "right": "May 2026"
+              }
+            ],
+            "note": "Relevant Coursework: Integrated Product Design | Mechanical Design | Dynamics | Moonshot Thinking | User Research"
+          }
+        ]
+      },
+      {
+        "title": "Work Experience",
+        "entries": [
+          {
+            "title": "Manufacturing Intern | Eaton",
+            "right": "May 2025 - August 2025",
+            "bullets": [
+              "Created over 20 work instructions with engineers to reflect current practices and safety standards in manufacturing",
+              "Collaborated with teams across production, safety, and manufacturing process improvements with 5S+ protocols",
+              "Designed custom tools for manufacturing using SolidWorks, and worked with shop technicians to increase efficiency",
+              "Optimized the SMT manufacturing assembly process saving $50K+ through quality tests and reducing material waste"
+            ]
+          },
+          {
+            "title": "Mechanical Design Intern | Jaros Baum and Bolles",
+            "right": "June 2024 - July 2024",
+            "bullets": [
+              "Developed 15+ technical drawings on potential floorplans with new HVAC systems for commercial and residential buildings through Revit to comply with industry standards",
+              "Oversaw mechanical design revisions and technical documentation using Bluebeam and AutoCAD to recommend cost-effective equipment to maximize customer satisfaction, including conducting onsite visits and maintenance reports"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Project Experience",
+        "entries": [
+          {
+            "title": "Accessibility-Based Smart Glasses | Personal Research",
+            "right": "July 2026 - Present",
+            "bullets": [
+              "Led end-to-end development of an affordable wearable for older adults experiencing both age-related hearing and vision loss, iterating on different housing designs doing material and cost analysis between TPU, ABS, and PLA",
+              "Conducted PESTLE analysis, market research, and user profiles across over 40 adults ages 65+ with degenerative conditions identifying rising rates of age-based diseases such as macular degeneration and hearing impairment",
+              "Evaluated FFT-based and time-domain approaches to real-time audio enhancement through AI-assisted prototyping,"
+            ]
+          },
+          {
+            "title": "Expandable Suitcase | Product Design",
+            "right": "August 2025 - December 2025",
+            "bullets": [
+              "Owned rapid mechanical design and prototyping of a functional expandable hard-shell suitcase with $300 budget",
+              "Iterated prototypes with SolidWorks and GD&T achieving 23% volume increase meeting TSA constraints upon use",
+              "Designed a telescoping rod pin-lock mechanism allowing for only .233 pound-force to deploy activation of expansion"
+            ]
+          },
+          {
+            "title": "Red Rover | Mechanical Design: Methods and Applications",
+            "right": "August 2024 - December 2024",
+            "bullets": [
+              "Designed a rover for those suffering mobility issues using SolidWorks and 3D-printed with PETG filament, capable of lifting and transporting objects, achieving a 50-pound max load verified using ANSYS for load analysis",
+              "Engineered a functional conveyor belt and base for object intake and deposit, programmed in Python for activation"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Leadership Experience",
+        "entries": [
+          {
+            "title": "Resident Advisor | Carnegie Mellon University",
+            "right": "August 2023 – May 2026",
+            "bullets": [
+              "Provided support and guidance to students, supervised over 500 residents, and resolved emergency situations",
+              "Hosted weekly events to promote student belonging and well-being with documented summaries with resident data"
+            ]
+          },
+          {
+            "title": "Vice President | SPIRIT (Black Student Union)",
+            "right": "April 2024 – May 2026",
+            "bullets": [
+              "Facilitated weekly body meetings, and coordinated events to build 15+ unique experiences for the general student body"
+            ]
+          },
+          {
+            "title": "Pre-College Initiate Chair | National Society of Black Engineers (NSBE)",
+            "right": "April 2023 – April 2025",
+            "bullets": [
+              "Organized 40+ K-12 students to teach about STEM, by introducing speakers, facilitating Q&As, and connecting faculty"
+            ]
+          },
+          {
+            "title": "Mechanic | SPIRIT Racing Systems",
+            "right": "September 2022 – February 2023",
+            "bullets": [
+              "Diagnosed and repaired disk brake systems on a carbon-fiber, non-motorized racing buggy, ensuring reliable stopping performance through varied race conditions dealing with rain and rough terrain at speeds upwards of 25 mph"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Skills",
+        "entries": [
+          {
+            "skills": [
+              {
+                "label": "Technical",
+                "value": "Creo, SolidWorks, AutoCAD, Adobe Creative Cloud, Revit, Unity, SAP Visual Studio Code, ANSYS"
+              },
+              {
+                "label": "Programming/Data Analysis",
+                "value": "Python, Arduino(C/C++), MATLAB, Microsoft Office, Google Studio, 3D CAD"
+              },
+              {
+                "label": "Fabrication",
+                "value": "Manual Mill, Soldering, Lathe, Band Saw, Komax Kappa, Laser Cutter, Bambu Printer, Creality 3D Printer"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "hints": {
+    "engineering": "Applying engineering fundamentals to projects.",
+    "design": "Creating and curating experiences, products and services.",
+    "prototyping": "For this class, all the projects had a 3 week time frame from conceptualization to product."
+  }
+}
