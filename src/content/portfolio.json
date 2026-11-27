@@ -611,7 +611,7 @@
       "hero": "/projects/24-672-ps7.jpg",
       "bg": "#462020",
       "fg": "#f7d5d4",
-      "brief": "Medicine saves lives, but it can also harm when it is misused or forgotten. Over 96,000 people a year die from drug overdose, and conditions such as dementia and Alzheimer's lead some patients to miss doses. This project rethinks the pill bottle as a monitored, contained dispenser. A proximity sensor in the cap tracks how many pills remain and a motion detector counts how often it is opened, so a doctor, family member or emergency contact can be told when medicine runs low or is misused. An acrylic window shows the contents at a glance, and a new dispensing mechanism replaces the hinged lid.",
+      "brief": "Medicine saves lives, but it can also harm when it is misused or forgotten. Over 96,000 people a year die from drug overdose, and conditions such as dementia and Alzheimer's lead some patients to miss doses. This project rethinks the pill bottle as a monitored, contained dispenser. A proximity sensor in the cap tracks how many pills remain and a motion detector counts how often it is opened, so a doctor, family member or emergency contact can be told when medicine runs low or is misused.",
       "tools": [
         "SolidWorks",
         "3D printing filament",
@@ -636,15 +636,12 @@
       "cad": {
         "images": [
           "/case-studies/24-672-ps7/07.jpg",
-          "/case-studies/24-672-ps7/08.jpg",
-          "/case-studies/24-672-ps7/11.jpg"
+          "/case-studies/24-672-ps7/08.jpg"
         ]
       },
       "fin": {
         "images": [
-          "/case-studies/24-672-ps7/03.jpg",
           "/case-studies/24-672-ps7/04.jpg",
-          "/case-studies/24-672-ps7/05.jpg",
           "/case-studies/24-672-ps7/06.jpg",
           "/case-studies/24-672-ps7/12.jpg",
           "/case-studies/24-672-ps7/13.jpg",
