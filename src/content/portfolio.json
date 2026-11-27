@@ -74,7 +74,11 @@
       "extra": [
         {
           "title": "Expansion mechanism",
-          "text": "The expansion mechanism was inspired by the operations of a suitcase handle. That system includes a button, button housing, and two inner and outer rods, each containing a pusher-pin mechanism and a thin metal rod. Inside the pusher-pin mechanism housing is a plunger, two springs, one vertical and one horizontal, and a metal pin with a slanted interior cut. The inner rod has holes cut outside along its vertical, large enough for the pin to stick through. The outer rod visually conceals the handle’s operation."
+          "text": "The expansion mechanism was inspired by the operations of a suitcase handle. That system includes a button, button housing, and two inner and outer rods, each containing a pusher-pin mechanism and a thin metal rod. Inside the pusher-pin mechanism housing is a plunger, two springs, one vertical and one horizontal, and a metal pin with a slanted interior cut. The inner rod has holes cut outside along its vertical, large enough for the pin to stick through. The outer rod visually conceals the handle’s operation.",
+          "images": [
+            "/case-studies/expandable-suitcase/drawing-inner-locking-pin.png"
+          ],
+          "size": "large"
         }
       ],
       "sk": {
@@ -107,11 +111,9 @@
         "text": "Fully dimensioned SolidWorks drawings of the expansion mechanism, from the full-suitcase assembly and bill of materials down to the locking pin, rod, button housing and mounts.",
         "images": [
           "/case-studies/expandable-suitcase/drawing-full-suitcase.png",
-          "/case-studies/expandable-suitcase/drawing-inner-locking-pin.png",
           "/case-studies/expandable-suitcase/drawing-inner-pin-outer-rod.png",
           "/case-studies/expandable-suitcase/drawing-button-housing.png",
-          "/case-studies/expandable-suitcase/drawing-bottom-mount.png",
-          "/case-studies/expandable-suitcase/drawing-side-mount.png"
+          "/case-studies/expandable-suitcase/drawing-bottom-mount.png"
         ]
       },
       "fin": {
