@@ -1,901 +1,761 @@
 {
- "palette": {
-  "Bat Wing": "#7E7B63",
-  "Espresso Martini": "#86440B",
-  "Cane Sugar": "#E8B985",
-  "Secret Passage": "#302910"
- },
- "sectionTitles": {
-  "brief": "Project brief",
-  "tools": "Tools used",
-  "sk": "Sketches",
-  "ide": "Prototypes and documentation",
-  "cad": "CAD models",
-  "tech": "Technical drawings",
-  "fin": "Final project",
-  "vid": "Video",
-  "docs": "Documents"
- },
- "projects": [
-  {
-   "id": "rr",
-   "cat": "engineering",
-   "t": "Red Rover",
-   "m": "Fall 2024. Mechanical Design: Methods and Applications",
-   "hero": "/projects/red-rover.jpg",
-   "brief": "The goal was to address mobility challenges for physically disabled individuals. We had free rein to tackle a problem around physical disability and devise a tool that promotes accessibility. My team chose to help people with long-term joint and muscle pain from conditions such as arthritis and dysgraphia. Red Rover was born from a desire to restore independence: a tool to ease the burden, reduce pain and bring back confidence. We started by exploring how an RC car could move heavy items, with a durable, stable frame, controls that stay user-friendly, and a conveyor to load objects. I designed the sketches, led the ideation, and designed the physical components in SolidWorks.",
-   "tools": [
-    "SolidWorks",
-    "ANSYS load analysis",
-    "Python",
-    "PETG 3D printing",
-    "RC car electronics",
-    "Conveyor and pulley system"
-   ],
-   "sk": {
-    "text": "Idea 1 was a Velcro conveyor belt driven by one 12-volt motor to push objects up an incline. Idea 2 was autonomous wheels able to lift boxes. Idea 3 combined those with a conveyor that could rise and lower itself. The final sketch was an RC car with a conveyor that acts like a drawbridge, with a wedge designed to get into boxes and other flat surfaces.",
-    "images": [
-     "/case-studies/red-rover/04.jpg",
-     "/case-studies/red-rover/05.jpg",
-     "/case-studies/red-rover/06.jpg",
-     "/case-studies/red-rover/07.jpg"
-    ]
-   },
-   "ide": {
-    "text": "Version 1.0 was four autonomous wheels using RFID to follow the user and an IR scanner to map a room, acting as a platform for people with joint issues. It was too much for our two-month timeline, so we pivoted to a remote-controlled rover with manual options to pick up objects that would stress a user's joints. Version 2 became an RC car with a conveyor belt and built-in ramp, working like a drawbridge to take in and deposit objects upwards of 50 pounds. The platform carries the most stress, so we modeled it as a plate under a uniform load and aimed for a factor of safety of 3. We moved the conveyor's support to the sides with divets and a pulley system, and made the RC car's wheels more shock absorbent so delicate items survive intake and drop-off.",
-    "images": [
-     "/case-studies/red-rover/01.png",
-     "/case-studies/red-rover/02.png",
-     "/case-studies/red-rover/03.png",
-     "/case-studies/red-rover/13.jpg"
-    ]
-   },
-   "cad": {
-    "text": "The base is the main mode of transport and holds items. The conveyor belt and ramp move upwards of 50 pounds onto the base. The spool is part of the drawbridge mechanism that pulls the ramp up, and the spacer adds resistance for the wheel. We printed the models in PETG for its light weight and relative strength, which let us build a physical prototype.",
-    "images": [
-     "/case-studies/red-rover/08.jpg",
-     "/case-studies/red-rover/09.jpg",
-     "/case-studies/red-rover/10.jpg",
-     "/case-studies/red-rover/11.jpg",
-     "/case-studies/red-rover/12.jpg"
-    ]
-   },
-   "fin": {
-    "text": "The final models: the conveyor belt, the load body and the rover frame. It took over 100 lines of code to make the RC car intuitive for people who have never driven one, and the conveyor and base were programmed in Python for activation. Load capacity was verified at 50 pounds using ANSYS.",
-    "images": [
-     "/case-studies/red-rover/14.jpg",
-     "/case-studies/red-rover/15.jpg",
-     "/case-studies/red-rover/16.jpg"
-    ]
-   },
-   "bg": "#462025",
-   "fg": "#f7d4d8"
-  },
-  {
-   "id": "sc",
-   "cat": "engineering",
-   "t": "Expandable Suitcase",
-   "m": "Fall 2025. Product Design",
-   "hero": "/projects/expandable-suitcase.jpg",
-   "brief": "A brand focused on user comfort, with a suitcase that does more than expand by an inch. We wanted it to expand by full sizes so it is the last suitcase you would need, conserving space and saving money and time. I owned the rapid mechanical design and prototyping of a functional expandable hard-shell suitcase on a $300 budget, using SolidWorks and GD&T to reach a 23% volume increase within TSA constraints. Our audience is Anna, a first-time traveler who researches heavily, prioritizes quality and durability, and wants one reliable suitcase for many destinations and weather.",
-   "tools": [
-    "SolidWorks",
-    "GD&T",
-    "Rapid prototyping",
-    "User surveys",
-    "Market research",
-    "TSA constraints"
-   ],
-   "sk": {
-    "text": "The problems we sketched against: overpacking, having to rearrange a suitcase because things do not fit, and TSA opening bags without warrant. Competing expandable bags add at most about 2 extra inches, so the goal was a suitcase that expands vertically by full sizes while staying lightweight, durable, able to stand on its own, and on wheels.",
-    "images": [
-     "/case-studies/expandable-suitcase/sketch-1.jpg",
-     "/case-studies/expandable-suitcase/sketch-2.jpg",
-     "/case-studies/expandable-suitcase/sketch-3.jpg"
-    ]
-   },
-   "ide": {
-    "text": "Surveys and market research drove the ideas, and the feature set became: expands vertically, lightweight, durable, promise-to-repair, built-in tracker and portable charger, and TSA-compliant. The global suitcase and briefcase market was about USD 30.0 billion in 2021, with roughly 7% growth projected over ten years. Three-piece sets run $200 to $1,000, low-end bags $30 to $50 and high-end bags $400 to $900. Our planned price is $130, in a compact 24.5 x 15 x 10.5 inch size and a large 36.5 x 15 x 10.5.",
-    "images": [
-     "/case-studies/expandable-suitcase/01-user-persona.png",
-     "/case-studies/expandable-suitcase/02-travel-pain-points.png",
-     "/case-studies/expandable-suitcase/03-user-priorities.png",
-     "/case-studies/expandable-suitcase/08-product-concept.png",
-     "/case-studies/expandable-suitcase/13-one-case-competition.png",
-     "/case-studies/expandable-suitcase/14-market-size.png",
-     "/case-studies/expandable-suitcase/15-market-growth.png",
-     "/case-studies/expandable-suitcase/16-conventional-expansion.png"
-    ]
-   },
-   "cad": {
-    "text": "The technical diagram shows the peg, plunger, button, inner shell and outer shell. I designed a telescoping rod pin-lock mechanism that needs only .233 pound-force to deploy the expansion.",
-    "images": [
-     "/case-studies/expandable-suitcase/05-locking-mechanism.png",
-     "/case-studies/expandable-suitcase/07-expansion-system.png"
-    ]
-   },
-   "tech": {
-    "text": "Fully dimensioned SolidWorks drawings of the expansion mechanism, from the full-suitcase assembly and bill of materials down to the locking pin, rod, button housing and mounts.",
-    "images": [
-     "/case-studies/expandable-suitcase/drawing-full-suitcase.png",
-     "/case-studies/expandable-suitcase/drawing-inner-locking-pin.png",
-     "/case-studies/expandable-suitcase/drawing-inner-pin-outer-rod.png",
-     "/case-studies/expandable-suitcase/drawing-button-housing.png",
-     "/case-studies/expandable-suitcase/drawing-bottom-mount.png",
-     "/case-studies/expandable-suitcase/drawing-side-mount.png"
-    ]
-   },
-   "fin": {
-    "text": "The working prototype, shown opened and standing, built and demoed with the team. We enter a market where three-piece sets are the norm with one suitcase that fits all sizes, while competitors in expansion are mostly duffle bags and soft-shell suitcases.",
-    "images": [
-     "/case-studies/expandable-suitcase/09-full-scale-prototype.jpg",
-     "/case-studies/expandable-suitcase/10-open-prototype.jpg",
-     "/case-studies/expandable-suitcase/11-extended-prototype.jpg",
-     "/case-studies/expandable-suitcase/report-compact-closed.jpg",
-     "/case-studies/expandable-suitcase/report-expanded-open.jpg"
-    ]
-   },
-   "bg": "#ddd7d0",
-   "fg": "#342009",
-   "documents": [
+  "projects": [
     {
-     "title": "Final Report (24-441 Product Design, Fall 2025)",
-     "file": "/case-studies/expandable-suitcase/final-report.pdf"
+      "id": "rr",
+      "cat": "engineering",
+      "t": "Red Rover",
+      "m": "Fall 2024. Mechanical Design: Methods and Applications",
+      "hero": "/projects/red-rover.jpg",
+      "bg": "#462025",
+      "fg": "#f7d4d8",
+      "brief": "The goal was to address mobility challenges for physically disabled individuals. We had free rein to tackle a problem around physical disability and devise a tool that promotes accessibility. My team chose to help people with long-term joint and muscle pain from conditions such as arthritis and dysgraphia. Red Rover was born from a desire to restore independence: a tool to ease the burden, reduce pain and bring back confidence. We started by exploring how an RC car could move heavy items, with a durable, stable frame, controls that stay user-friendly, and a conveyor to load objects. I designed the sketches, led the ideation, and designed the physical components in SolidWorks.",
+      "tools": [
+        "SolidWorks",
+        "ANSYS load analysis",
+        "Python",
+        "PETG 3D printing",
+        "RC car electronics",
+        "Conveyor and pulley system"
+      ],
+      "sk": {
+        "text": "Idea 1 was a Velcro conveyor belt driven by one 12-volt motor to push objects up an incline. Idea 2 was autonomous wheels able to lift boxes. Idea 3 combined those with a conveyor that could rise and lower itself. The final sketch was an RC car with a conveyor that acts like a drawbridge, with a wedge designed to get into boxes and other flat surfaces.",
+        "images": [
+          "/case-studies/red-rover/04.jpg",
+          "/case-studies/red-rover/05.jpg",
+          "/case-studies/red-rover/06.jpg",
+          "/case-studies/red-rover/07.jpg"
+        ]
+      },
+      "ide": {
+        "text": "Version 1.0 was four autonomous wheels using RFID to follow the user and an IR scanner to map a room, acting as a platform for people with joint issues. It was too much for our two-month timeline, so we pivoted to a remote-controlled rover with manual options to pick up objects that would stress a user's joints. Version 2 became an RC car with a conveyor belt and built-in ramp, working like a drawbridge to take in and deposit objects upwards of 50 pounds. The platform carries the most stress, so we modeled it as a plate under a uniform load and aimed for a factor of safety of 3. We moved the conveyor's support to the sides with divets and a pulley system, and made the RC car's wheels more shock absorbent so delicate items survive intake and drop-off.",
+        "images": [
+          "/case-studies/red-rover/01.png",
+          "/case-studies/red-rover/02.png",
+          "/case-studies/red-rover/03.png",
+          "/case-studies/red-rover/13.jpg"
+        ]
+      },
+      "cad": {
+        "text": "The base is the main mode of transport and holds items. The conveyor belt and ramp move upwards of 50 pounds onto the base. The spool is part of the drawbridge mechanism that pulls the ramp up, and the spacer adds resistance for the wheel. We printed the models in PETG for its light weight and relative strength, which let us build a physical prototype.",
+        "images": [
+          "/case-studies/red-rover/08.jpg",
+          "/case-studies/red-rover/09.jpg",
+          "/case-studies/red-rover/10.jpg",
+          "/case-studies/red-rover/11.jpg",
+          "/case-studies/red-rover/12.jpg"
+        ]
+      },
+      "fin": {
+        "text": "The final models: the conveyor belt, the load body and the rover frame. It took over 100 lines of code to make the RC car intuitive for people who have never driven one, and the conveyor and base were programmed in Python for activation. Load capacity was verified at 50 pounds using ANSYS.",
+        "images": [
+          "/case-studies/red-rover/14.jpg",
+          "/case-studies/red-rover/15.jpg",
+          "/case-studies/red-rover/16.jpg"
+        ]
+      }
+    },
+    {
+      "id": "sc",
+      "cat": "engineering",
+      "t": "Expandable Suitcase",
+      "m": "Fall 2025. Product Design",
+      "hero": "/projects/expandable-suitcase.jpg",
+      "bg": "#ddd7d0",
+      "fg": "#342009",
+      "brief": "A brand focused on user comfort, with a suitcase that does more than expand by an inch. We wanted it to expand by full sizes so it is the last suitcase you would need, conserving space and saving money and time. I owned the rapid mechanical design and prototyping of a functional expandable hard-shell suitcase on a $300 budget, using SolidWorks and GD&T to reach a 23% volume increase within TSA constraints. Our audience is Anna, a first-time traveler who researches heavily, prioritizes quality and durability, and wants one reliable suitcase for many destinations and weather.\n\nOur product is an expandable hard-shell suitcase, otherwise known as the Expandy-Mandy. It has a compact and expanded mode, increasing in size from 26 to 34 inches in height. The compact size is designed to be within carry-on limits, giving users additional storage for personal items and purchases when traveling. From surveyors, people ran into issues with overpacking and overweight luggage, luggage that is easily damaged or broken, and lacks structure for protecting objects inside of it",
+      "tools": [
+        "SolidWorks",
+        "GD&T",
+        "Rapid prototyping",
+        "User surveys",
+        "Market research",
+        "TSA constraints"
+      ],
+      "extra": [
+        {
+          "title": "Expansion mechanism",
+          "text": "The expansion mechanism was inspired by the operations of a suitcase handle. That system includes a button, button housing, and two inner and outer rods, each containing a pusher-pin mechanism and a thin metal rod. Inside the pusher-pin mechanism housing is a plunger, two springs, one vertical and one horizontal, and a metal pin with a slanted interior cut. The inner rod has holes cut outside along its vertical, large enough for the pin to stick through. The outer rod visually conceals the handle’s operation."
+        }
+      ],
+      "sk": {
+        "text": "The problems we sketched against: overpacking, having to rearrange a suitcase because things do not fit, and TSA opening bags without warrant. Competing expandable bags add at most about 2 extra inches, so the goal was a suitcase that expands vertically by full sizes while staying lightweight, durable, able to stand on its own, and on wheels.",
+        "images": [
+          "/case-studies/expandable-suitcase/sketch-1.jpg",
+          "/case-studies/expandable-suitcase/sketch-2.jpg",
+          "/case-studies/expandable-suitcase/sketch-3.jpg"
+        ]
+      },
+      "ide": {
+        "text": "Surveys and market research drove the ideas, and the feature set became: expands vertically, lightweight, durable, promise-to-repair, built-in tracker and portable charger, and TSA-compliant. The global suitcase and briefcase market was about USD 30.0 billion in 2021, with roughly 7% growth projected over ten years. Three-piece sets run $200 to $1,000, low-end bags $30 to $50 and high-end bags $400 to $900. Our planned price is $130, in a compact 24.5 x 15 x 10.5 inch size and a large 36.5 x 15 x 10.5.",
+        "images": [
+          "/case-studies/expandable-suitcase/01-user-persona.png",
+          "/case-studies/expandable-suitcase/02-travel-pain-points.png",
+          "/case-studies/expandable-suitcase/03-user-priorities.png",
+          "/case-studies/expandable-suitcase/13-one-case-competition.png",
+          "/case-studies/expandable-suitcase/15-market-growth.png",
+          "/case-studies/expandable-suitcase/16-conventional-expansion.png"
+        ]
+      },
+      "cad": {
+        "text": "The technical diagram shows the peg, plunger, button, inner shell and outer shell. I designed a telescoping rod pin-lock mechanism that needs only .233 pound-force to deploy the expansion.",
+        "images": [
+          "/case-studies/expandable-suitcase/05-locking-mechanism.png",
+          "/case-studies/expandable-suitcase/07-expansion-system.png"
+        ]
+      },
+      "tech": {
+        "text": "Fully dimensioned SolidWorks drawings of the expansion mechanism, from the full-suitcase assembly and bill of materials down to the locking pin, rod, button housing and mounts.",
+        "images": [
+          "/case-studies/expandable-suitcase/drawing-full-suitcase.png",
+          "/case-studies/expandable-suitcase/drawing-inner-locking-pin.png",
+          "/case-studies/expandable-suitcase/drawing-inner-pin-outer-rod.png",
+          "/case-studies/expandable-suitcase/drawing-button-housing.png",
+          "/case-studies/expandable-suitcase/drawing-bottom-mount.png",
+          "/case-studies/expandable-suitcase/drawing-side-mount.png"
+        ]
+      },
+      "fin": {
+        "text": "The working prototype, shown opened and standing, built and demoed with the team. We enter a market where three-piece sets are the norm with one suitcase that fits all sizes, while competitors in expansion are mostly duffle bags and soft-shell suitcases.",
+        "images": [
+          "/case-studies/expandable-suitcase/09-full-scale-prototype.jpg",
+          "/case-studies/expandable-suitcase/10-open-prototype.jpg",
+          "/case-studies/expandable-suitcase/11-extended-prototype.jpg",
+          "/case-studies/expandable-suitcase/report-compact-closed.jpg",
+          "/case-studies/expandable-suitcase/report-expanded-open.jpg"
+        ]
+      },
+      "documents": [
+        {
+          "title": "Final Report (24-441 Product Design, Fall 2025)",
+          "file": "/case-studies/expandable-suitcase/final-report.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ach",
+      "cat": "engineering",
+      "t": "Astronaut Coat Rack",
+      "m": "2024. 24-262",
+      "hero": "/projects/spaceship-hanger.png",
+      "bg": "#e6e6db",
+      "fg": "#343409",
+      "brief": "The goal of this project was to create a frame that was able to hold 40 pounds and 10 pounds respectively with tight size constraints while also making it as light as possible. The theme of the project was space, as we were designing a coat rack for astronauts on Mars, where the gravitational pull was much less than Earth, causing their suits to weigh 40 pounds and their helmets 10. Our design had to be able to hold both items, ensuring that they were at least 1 inch apart. With that in mind, we were designing with the goal of a factor of safety of at least one. This was a group project where we made our designs to accomplish this task.<br><br>Later on in another course, we were tasked with the challenge of turning our hangar into a 3D model. We needed to account for the fact that there were different stresses involved in the process now.",
+      "tools": [
+        "SolidWorks",
+        "FEA"
+      ],
+      "sk": {
+        "text": "This was the prototype I designed as we were working with different design languages and potential shapes that we could use to get our desired result.",
+        "images": [
+          "/case-studies/spaceship-hanger/07.png"
+        ]
+      },
+      "cad": {
+        "text": "From here we used our knowledge in SolidWorks to best iterate on this design so that we could imagine how this project would look in a 3D space, which we rendered with SolidWorks.",
+        "images": [
+          "/case-studies/spaceship-hanger/01.png",
+          "/case-studies/spaceship-hanger/03.png",
+          "/case-studies/spaceship-hanger/05.png",
+          "/case-studies/spaceship-hanger/09.png",
+          "/case-studies/spaceship-hanger/10.png",
+          "/case-studies/spaceship-hanger/11.jpg",
+          "/case-studies/spaceship-hanger/12.png",
+          "/case-studies/spaceship-hanger/13.png"
+        ]
+      },
+      "fin": {
+        "text": "By designing it in SolidWorks, we could run FEA and often got a factor of safety much less than our desired result. We wanted an FOS of 1 while still maintaining that original vision. It was then that we decided to think in terms of strengthening the existing supports to ensure that the project would still be able to hold the necessary load even in the 3D space the objects now resided in."
+      }
+    },
+    {
+      "id": "bridge",
+      "cat": "engineering",
+      "t": "Bridge",
+      "m": "2023",
+      "hero": "/projects/bridge.jpeg",
+      "bg": "#e1d6cc",
+      "fg": "#341e09",
+      "brief": "Our project was to build a bridge that would be able to sustain the weight of a human being while also remaining as light as possible. We were given a limited number of bars to work with that couldn't exceed 17 by 12 inches. After 4 weeks of construction, this was the end result."
+    },
+    {
+      "id": "rob",
+      "cat": "engineering",
+      "t": "Robotics",
+      "m": "2023",
+      "hero": "/projects/robotics.jpg",
+      "bg": "#3b372b",
+      "fg": "#f7f0d4",
+      "brief": "As Captain of my school's FIRST robotics team, I had a lot of responsibilities, one of which included being our main designer when it came to building our robot. Coming off a 2 year hiatus due to the pandemic, we had to start from scratch with our old team's design being obsolete and in disrepair. I took on the job of designing the initial core features of our robot to perform a variety of tasks such as grabbing and moving blocks using a claw as our intake, being able to move omni directionally, being able to mount and hold a battery and phone as well as other things.",
+      "sk": {
+        "text": "This is the version one drawing that was created in order to accomplish this task.",
+        "images": [
+          "/case-studies/robotics/01.jpg",
+          "/case-studies/robotics/02.jpg"
+        ]
+      },
+      "ide": {
+        "text": "Version 1.5 is the physical recreation of that robot. We worked on the design and the mechanics for 7 weeks, with this design ultimately taking us to the NY qualifiers. Adding an extendable arm that let us place the blocks we picked and wheels on the side to spin the disk holding our objective, our robot was meticulously designed to be good at traversal and retrieval but able to do everything if need be.",
+        "images": [
+          "/case-studies/robotics/03.jpg",
+          "/case-studies/robotics/04.jpg",
+          "/case-studies/robotics/05.jpg",
+          "/case-studies/robotics/06.jpg",
+          "/case-studies/robotics/07.jpg",
+          "/case-studies/robotics/08.jpg"
+        ]
+      },
+      "fin": {
+        "text": "Version 2: We constantly iterated the design to continue to improve on our objectives of speed and retrieval."
+      }
+    },
+    {
+      "id": "nf",
+      "cat": "design",
+      "t": "Netflix: Hansel & Gretel",
+      "m": "2025. A Netflix live experience",
+      "hero": "/projects/hansel-and-gretel.png",
+      "bg": "#3b2b2b",
+      "fg": "#f7d4d5",
+      "brief": "The ask: develop an experience that brings Hansel & Gretel to life in the 21st century, focused on shareability and virality. The experience immerses groups in a gripping escape, blending augmented reality within a physical restaurant space as they race to escape the candy-coated escape room of Hansel and Gretel. It is a physical experience and promotional rollout that brings a familiar story into a darker, contemporary world. Team: Elizabeth Wang, Ahmad Salman, Carissa Chou and Phoebe Lee. I was the product designer, in charge of building and coding the physical components while sticking to the theme.",
+      "tools": [
+        "Figma",
+        "SolidWorks",
+        "Unity",
+        "Fusion 360",
+        "Arduino",
+        "AR headset"
+      ],
+      "sk": {
+        "text": "Branding and poster studies: the HANSEL & GRETEL name, the H+G logo, and a set of Netflix posters with a 10.31.2024 date and the line that some things are not as sweet as they appear.",
+        "images": [
+          "/case-studies/hansel-and-gretel/package/invites-you-1.png",
+          "/case-studies/hansel-and-gretel/package/invites-you-2.png",
+          "/case-studies/hansel-and-gretel/package/invites-you-3.png",
+          "/case-studies/hansel-and-gretel/package/invites-you.png",
+          "/case-studies/hansel-and-gretel/package/tabloid---1.jpg",
+          "/case-studies/hansel-and-gretel/package/tabloid---3.jpg"
+        ]
+      },
+      "ide": {
+        "text": "The tech diagram maps how one computer links a Bluetooth speaker in the oven for audio, lighting changes, an Arduino driving LEDs, Bluetooth and motors, and Unity delivering new clues to the headsets. The location parti plans a 300 foot site: a 2,500 sq ft restaurant, 1,500 sq ft kitchen, 600 sq ft lobby and bathrooms, and escape rooms of 600 sq ft each with a game master room and tech booth.",
+        "images": [
+          "/case-studies/hansel-and-gretel/package/pexels-cottonbro-5985180.jpg"
+        ]
+      },
+      "cad": {
+        "text": "The rendering and physical mock-up show a toaster oven with two spinning plates on top that react to the player. The oven houses the digital-to-physical hardware, with the Arduino controlling lights and motors while Unity handles the AR clues.",
+        "images": [
+          "/kit/hg_cad0.jpg",
+          "/kit/hg_cad1.jpg",
+          "/kit/hg_cad2.jpg"
+        ]
+      },
+      "fin": {
+        "text": "Players interact using digital-to-physical hardware and the experience starts. Solving clues in the digital space triggers indicators showing what is needed in the physical world to progress. When they finish, both an auditory and visual indicator signal the end of the experience.",
+        "images": [
+          "/kit/hg_fin0.jpg",
+          "/kit/hg_fin1.jpg",
+          "/kit/hg_fin2.jpg",
+          "/case-studies/hansel-and-gretel/package/final-1.jpg",
+          "/case-studies/hansel-and-gretel/package/final-2.jpg",
+          "/case-studies/hansel-and-gretel/package/final-3.jpg",
+          "/case-studies/hansel-and-gretel/package/final-4.jpg"
+        ]
+      },
+      "documents": [
+        {
+          "title": "Invitation 1",
+          "file": "/case-studies/hansel-and-gretel/package/frame-6.pdf"
+        },
+        {
+          "title": "Invitation 2",
+          "file": "/case-studies/hansel-and-gretel/package/frame-6-1.pdf"
+        },
+        {
+          "title": "Invitation 3",
+          "file": "/case-studies/hansel-and-gretel/package/frame-6-2.pdf"
+        },
+        {
+          "title": "Invitation 4",
+          "file": "/case-studies/hansel-and-gretel/package/frame-6-3.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ux",
+      "cat": "design",
+      "t": "Magazine Design",
+      "m": "2023. Communication & Digital Design Fundamentals ",
+      "hero": "/projects/ux-design.png",
+      "bg": "#4f1c17",
+      "fg": "#f7e6d4",
+      "brief": "Throughout the fall semester I had a variety of projects and side interests that I did, whether for class or my own. This particular project was our end of semester assignment in which we were required to make a magazine, and this was the result of 6 weeks worth of work.",
+      "tools": [
+        "Photoshop",
+        "Illustrator",
+        "InDesign",
+        "Figma"
+      ],
+      "ide": {
+        "text": "For this project I designed three potential design systems in order to see which would best represent the themes I wanted my magazine to adhere to. I would choose a color palette, limiting myself to three colors and to one of their shades, basing my design around that. I also created mood boards for each of my design systems to see just how the colors would interact if combined. This process relied heavily on me considering my intended target audience and what exactly I wanted to say about the topic I had selected to be my magazine.",
+        "images": [
+          "/case-studies/ux-design/01.png",
+          "/case-studies/ux-design/03.png",
+          "/case-studies/ux-design/05.png",
+          "/case-studies/ux-design/07.png",
+          "/case-studies/ux-design/09.png",
+          "/case-studies/ux-design/11.png"
+        ]
+      },
+      "fin": {
+        "text": "These are the finalized spreads that I ended up completing at the end of the five weeks. My goal when creating these slides was to evoke my subject matter even without the reader needing to read the entire passage to understand. Throughout the piece, buildings, bricks, and murals are a constant design choice to convey murals and street art. The presence of paint dripping and physical pictures of murals help to emphasize the article and keep the reader's attention. This piece was experimental and took a lot of time, but the end result came together to bring the concept to life.<br><br>This was the Instagram portion of the project, where the goal was to convey our magazine in a bite sized format that was easily recognizable and able to appear on various social media such as Instagram. For me, the idea I had in mind was obvious, as I thought nothing best represented the topic as much as the cover did to get across the story as well as show off the creative elements that would be consistent through the entire design.",
+        "images": [
+          "/11.png"
+        ]
+      }
+    },
+    {
+      "id": "desk",
+      "cat": "design",
+      "t": "Ever Changing Desk",
+      "m": "2024. 51-261",
+      "hero": "/projects/51-261-ever-changing-desk.jpg",
+      "bg": "#3b352b",
+      "fg": "#d4eaf7",
+      "brief": "<b>The Prompt:</b> A major manufacturer of office paper and storage products has identified a new market segment, college students. As an introduction to this market, it was decided to first focus on desk accessories, more specifically personal storage units. Using yourself as the consumer, your challenge was to design a desktop/work storage unit that addresses the following criteria: it must be able to support four items commonly used in your working/study environment; thoughtful considerations on how people (you) interact with it are important; it will be sold in major distribution centers and therefore must be stackable vertically and horizontally; the marketing group has determined that sharp square or rectangular forms and features would best distinguish their product from the softer form aesthetics currently offered by the competition.<br><br><b>User Persona:</b> The user, a sophomore in Mechanical Engineering, finds himself grappling with keeping a healthy and productive work environment amidst the variety of equipment he carries for his classes. The user needs a dynamic workspace that can adapt to different environments. Not only to accommodate his changing surroundings, Ahmad envisions a workspace that aligns with his on the go work balance that can also help increase productivity and a cleaner lifestyle.",
+      "sk": {
+        "text": "Initial concepts in regards to the design language of the modular desk. After going over the prompt, I went through multiple iterations of designs. The goal was a sleek unobtrusive design that allowed for decent organization and was mobile. Eventually, I landed in this area of design."
+      },
+      "ide": {
+        "text": "<b>Key Observations and Insight:</b> Users' workspace is highly mobile and rarely in one location for a typical day. The user seems to take up all the available space in a room no matter how big the area is. The user has a lot of items that should be separated.<br><br><b>Stands:</b> The goal of my project is to build a portable desk. The stands in my design have the goal of elevating the object, encouraging productivity as well as being a place to contain both materials and the space of the workable area.<br><br><b>Boxes:</b> The boxes in this case would be modular containers on the go that would allow the stacking and separation of materials depending on the situation. These would be built to be stackable and be able to view the contents of the box without needing to be opened."
+      },
+      "cad": {
+        "text": "Finalized concept drawing for the stand, finalized box design, and prototype drawing with views."
+      },
+      "fin": {
+        "text": "Actual product in use.<br><br><b>Takeaways:</b> From this experience, I learned the importance of considering all parts of the product in order to develop the full set of measurements. I realized one failsafe method to be used in the future could incorporate CAD modeling, as in SolidWorks or Fusion 360. This experience helped me to understand the mechanical properties of cardboard, wood and other simple materials. I've now come to understand the importance of rapid prototyping to see if an idea would be realistic in a way that wouldn't take a toll on what resources we have available."
+      },
+      "secs": [
+        {
+          "title": "Project brief",
+          "text": "<b>The Prompt:</b> A major manufacturer of office paper and storage products has identified a new market segment, college students. As an introduction to this market, it was decided to first focus on desk accessories, more specifically personal storage units. Using yourself as the consumer, your challenge was to design a desktop/work storage unit that addresses the following criteria: it must be able to support four items commonly used in your working/study environment; thoughtful considerations on how people (you) interact with it are important; it will be sold in major distribution centers and therefore must be stackable vertically and horizontally; the marketing group has determined that sharp square or rectangular forms and features would best distinguish their product from the softer form aesthetics currently offered by the competition.<br><br><b>User Persona:</b> The user, a sophomore in Mechanical Engineering, finds himself grappling with keeping a healthy and productive work environment amidst the variety of equipment he carries for his classes. The user needs a dynamic workspace that can adapt to different environments. Not only to accommodate his changing surroundings, Ahmad envisions a workspace that aligns with his on the go work balance that can also help increase productivity and a cleaner lifestyle."
+        },
+        {
+          "title": "Research and observations",
+          "text": "<b>Observation 1: Never at home.</b> The user's workspace is highly mobile and rarely in one location for the duration of a typical day.<br><br><b>Observation 2: Takes up a lot of space.</b> The user seems to take up all the available space in a room no matter how big the area is.<br><br><b>Observation 3: Has a lot of items that should be separated.</b> I have a range of digital and physical items I use and they are often either dead at odds or taking up a lot of space. I often have wires just around.",
+          "images": [
+            "/case-studies/51-261-ever-changing-desk/10.jpg"
+          ]
+        },
+        {
+          "title": "Features needed",
+          "text": "<b>Must haves:</b> light; portable; a sleek design that matches the black, gray and brown aesthetic of my devices.<br><br><b>Avoids:</b> being too clunky or out of place; it should be able to fit in a 3 by 9 inch area without issue; it should not interfere with any other workspace."
+        },
+        {
+          "title": "Sketches",
+          "text": "Some sketches of design for boxes and stands for the modular desk design. Goals for the modular desk: stands and boxes. Three directions were explored: Design 1 Lego Blocks, Design 2 Flower Pots and Design 3 Variable Height Stand. I chose the foldable box as a way for the user to save space with that added bit of modularity.",
+          "images": [
+            "/case-studies/51-261-ever-changing-desk/03.png",
+            "/case-studies/51-261-ever-changing-desk/04.png",
+            "/case-studies/51-261-ever-changing-desk/05.png",
+            "/case-studies/51-261-ever-changing-desk/06.png",
+            "/case-studies/51-261-ever-changing-desk/07.png",
+            "/case-studies/51-261-ever-changing-desk/08.png",
+            "/case-studies/51-261-ever-changing-desk/09.jpg"
+          ]
+        },
+        {
+          "title": "The process",
+          "text": "<b>Stands:</b> The goal of my project is to build a portable desk. The stands in my design have the goal of elevating the object, encouraging productivity as well as being a place to contain both materials and the space of the workable area.<br><br><b>Boxes:</b> The boxes in this case would be modular containers on the go that would allow the stacking and separation of materials depending on the situation. Stackable boxes are clear boxes that can stack on one another. They are closable cubes that have a sliding lid and nubs on the bottom, with magnetic clips to stack and connect to the stands. Foldable boxes can be folded and fit to increase space and mobility.",
+          "images": [
+            "/case-studies/51-261-ever-changing-desk/11.jpg"
+          ]
+        },
+        {
+          "title": "Materials and prototype",
+          "text": "<b>Stand:</b> 1/4 inch wood, duct tape, cardboard, hot glue. <b>Box:</b> 1/4 inch wood, plastic film, cardboard, hot glue.<br><br><b>Pros:</b> the stand is strong and lightweight, supports the modular design and creates a workable area; the box has good visibility, is modular and is secure. <b>Cons:</b> a mobility issue, folding the wrong way, and durability."
+        },
+        {
+          "title": "Takeaways and next steps",
+          "text": "<b>Takeaways:</b> From this experience, I learned the importance of considering all parts of the product in order to develop the full set of measurements. I realized one failsafe method to be used in the future could incorporate CAD modeling, as in SolidWorks or Fusion 360. This experience helped me to understand the mechanical properties of cardboard, wood and other simple materials. I've now come to understand the importance of rapid prototyping to see if an idea would be realistic in a way that wouldn't take a toll on what resources we have available.<br><br><b>For the future:</b> construct a hinge part to ensure the folding of the stand is achieved; use a different material like cloth or a thinner re-bent plastic piece to get the folding correct on the box; leave more room for error when cutting materials.",
+          "images": [
+            "/case-studies/51-261-ever-changing-desk/01.jpg",
+            "/case-studies/51-261-ever-changing-desk/12.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ipc",
+      "cat": "design",
+      "t": "iPad Cover Prototypes",
+      "m": "2023",
+      "hero": "/projects/ipad-cover-prototypes.jpg",
+      "bg": "#273b3f",
+      "fg": "#d4ecf7",
+      "brief": "As a student, the tools I use to keep up in the academic life that I exist in are an absolute necessity in my everyday life. However, when using my iPad 9, I found myself unsatisfied specifically with the case options. They lacked the ergonomic or creative designs that represented the colors and UI that Apple provided, while also being limited in function or increasingly out of my budget as a college student. That's why I decided to take a chance to make a design that best suited my needs.",
+      "sk": {
+        "text": "V.1 of my design: early conceptualization of colors and section breakdowns. This is where I decided to begin experimenting on how my potential ideal iPad case would be. In many cases, as well as iPads, we have more fillet corners on the device, softer curves to rest more comfortably in the user's hands. In my initial design, I wanted to invoke a slightly more drastic design change, opting for harsher corners to emphasize the display and give the iPad more of a floating screen dynamic rather than a notebook, to increase the area viewed to the area used, taking inspiration from clipboards.",
+        "images": [
+          "/case-studies/ipad-cover-prototypes/03.jpg",
+          "/case-studies/ipad-cover-prototypes/04.jpg"
+        ]
+      },
+      "ide": {
+        "text": "Here was V.2 of my design with exact measurements of possible folding configurations and how exactly I wanted my hinge to work, with multiple hinge designs to test for ease of use and strength.",
+        "images": [
+          "/case-studies/ipad-cover-prototypes/01.jpg",
+          "/case-studies/ipad-cover-prototypes/02.jpg",
+          "/case-studies/ipad-cover-prototypes/05.jpg",
+          "/case-studies/ipad-cover-prototypes/06.jpg"
+        ]
+      }
+    },
+    {
+      "id": "ssm",
+      "cat": "design",
+      "t": "Spaceship Model",
+      "m": "2023",
+      "hero": "/projects/spaceship-model.png",
+      "bg": "#3b2b2b",
+      "fg": "#f7d4d4",
+      "brief": "A personal project of mine. I just wanted to see if I could make my concept a reality, so I went and made a mock-up of the way I wanted my prop to come out. For years I was a huge fan of Star Wars and I wanted to make my rendition of the ship and how it would look if I took a look at it."
+    },
+    {
+      "id": "skb",
+      "cat": "design",
+      "t": "Sketchbook",
+      "m": "2023",
+      "hero": "/projects/project.jpg",
+      "bg": "#3b2b2b",
+      "fg": "#f7d4d4",
+      "sk": {
+        "images": [
+          "/case-studies/project/01.jpg",
+          "/case-studies/project/02.jpg",
+          "/case-studies/project/03.jpg",
+          "/case-studies/project/04.jpg",
+          "/case-studies/project/05.jpg",
+          "/case-studies/project/06.jpg",
+          "/case-studies/project/07.jpg",
+          "/case-studies/project/08.jpg",
+          "/case-studies/project/09.jpg",
+          "/case-studies/project/10.jpg",
+          "/case-studies/project/11.jpg",
+          "/case-studies/project/12.jpg",
+          "/case-studies/project/13.jpg",
+          "/case-studies/project/14.jpg",
+          "/case-studies/project/15.jpg",
+          "/case-studies/project/16.jpg",
+          "/case-studies/project/17.jpg",
+          "/case-studies/project/18.jpg",
+          "/case-studies/project/19.jpg",
+          "/case-studies/project/20.jpg",
+          "/case-studies/project/21.jpg",
+          "/case-studies/project/22.jpg",
+          "/case-studies/project/23.jpg",
+          "/case-studies/project/24.jpg",
+          "/case-studies/project/25.jpg",
+          "/case-studies/project/26.jpg",
+          "/case-studies/project/27.jpg",
+          "/case-studies/project/28.jpg",
+          "/case-studies/project/29.jpg",
+          "/case-studies/project/30.jpg",
+          "/case-studies/project/31.jpg",
+          "/case-studies/project/32.jpg",
+          "/case-studies/project/33.jpg",
+          "/case-studies/project/34.jpg",
+          "/case-studies/project/35.jpg",
+          "/case-studies/project/36.jpg",
+          "/case-studies/project/37.jpg",
+          "/case-studies/project/38.jpg",
+          "/case-studies/project/39.jpg",
+          "/case-studies/project/40.jpg",
+          "/case-studies/project/41.jpg",
+          "/case-studies/project/42.jpg",
+          "/case-studies/project/43.jpg",
+          "/case-studies/project/44.jpg",
+          "/case-studies/project/45.jpg",
+          "/case-studies/project/46.jpg",
+          "/case-studies/project/47.jpg",
+          "/case-studies/project/48.jpg",
+          "/case-studies/project/49.jpg",
+          "/case-studies/project/50.jpg",
+          "/case-studies/project/51.jpg",
+          "/case-studies/project/52.jpg",
+          "/case-studies/project/53.jpg",
+          "/case-studies/project/54.jpg",
+          "/case-studies/project/55.jpg",
+          "/case-studies/project/56.jpg",
+          "/case-studies/project/57.jpg",
+          "/case-studies/project/58.jpg",
+          "/case-studies/project/59.jpg",
+          "/case-studies/project/60.jpg",
+          "/case-studies/project/61.jpg",
+          "/case-studies/project/62.jpg",
+          "/case-studies/project/63.jpg",
+          "/case-studies/project/64.jpg",
+          "/case-studies/24-672-ps6/01.jpg",
+          "/case-studies/24-672-ps6/02.jpg",
+          "/case-studies/24-672-ps6/03.jpg",
+          "/case-studies/24-672-ps6/04.jpg",
+          "/case-studies/24-672-ps6/05.jpg",
+          "/case-studies/24-672-ps6/06.jpg",
+          "/case-studies/24-672-ps6/07.jpg",
+          "/case-studies/24-672-ps6/08.jpg",
+          "/case-studies/24-672-ps6/09.jpg",
+          "/case-studies/24-672-ps6/10.jpg"
+        ]
+      }
+    },
+    {
+      "id": "ch",
+      "cat": "prototyping",
+      "t": "Clay Headphones",
+      "m": "2025. 24-672 PS5",
+      "hero": "/projects/24-672-ps5.jpg",
+      "bg": "#3e3028",
+      "fg": "#f7e0d4",
+      "sk": {
+        "images": [
+          "/case-studies/24-672-ps5/03.jpg",
+          "/case-studies/24-672-ps5/04.jpg",
+          "/case-studies/24-672-ps5/05.jpg"
+        ]
+      },
+      "ide": {
+        "images": [
+          "/case-studies/24-672-ps5/02.jpg",
+          "/case-studies/24-672-ps5/07.jpg",
+          "/case-studies/24-672-ps5/09.jpg"
+        ]
+      },
+      "fin": {
+        "images": [
+          "/case-studies/24-672-ps5/08.jpg"
+        ]
+      }
+    },
+    {
+      "id": "tc",
+      "cat": "prototyping",
+      "t": "Transformative Container",
+      "m": "2025. 24-672 PS2",
+      "hero": "/projects/ps2.jpg",
+      "bg": "#dcdcd0",
+      "fg": "#091334",
+      "brief": "<b>Goal:</b> Design a takeout box, or any other container, that can be transformed into another object to create a dual purpose container. Your design can either improve on the existing traditional takeout box or you can create an entirely new container from scratch. The transformation process cannot require the use of additional tools, and once transformed, it does not need to be able to return to its original shape. The container can be made of any kind of thick paper of your choosing but you may not use glue or any other type of adhesive. There are no limitations in the size of your product or how much material you use.<br><br><b>Design:</b> My design is a transformative to go box that can be used as a bowl and carried with two handles like a bag. Once open there is a cylindrical repository for items to be placed. The cylinder container can be moved and works separately from the original container. The goal would be to have two separate containers for different items. As an example, filling the base with a salad and the cylinder with toppings was a potential use case for this product.",
+      "tools": [
+        "Cardstock",
+        "Box cutter",
+        "Hot glue"
+      ],
+      "sk": {
+        "images": [
+          "/case-studies/ps2/07.jpg",
+          "/case-studies/ps2/08.jpg",
+          "/case-studies/ps2/09.jpg"
+        ]
+      },
+      "ide": {
+        "images": [
+          "/case-studies/ps2/01.jpg",
+          "/case-studies/ps2/02.jpg",
+          "/case-studies/ps2/03.jpg",
+          "/case-studies/ps2/04.jpg",
+          "/case-studies/ps2/05.jpg",
+          "/case-studies/ps2/06.jpg"
+        ]
+      }
+    },
+    {
+      "id": "p3",
+      "cat": "prototyping",
+      "t": "Phone holder",
+      "m": "2025. 24-672 PS3",
+      "hero": "/projects/24-672-ps3.jpg",
+      "bg": "#edd6c0",
+      "fg": "#341c09",
+      "sk": {
+        "images": [
+          "/case-studies/24-672-ps3/03.jpg",
+          "/case-studies/24-672-ps3/04.jpg",
+          "/case-studies/24-672-ps3/05.jpg",
+          "/phone stand concept final.jpg",
+          "/phone stand concept final 2.jpg"
+        ]
+      },
+      "ide": {
+        "text": "Physical models in cardboard, aluminium rods and springs tested the mechanism and the phone holding before committing to the final build in acrylic.",
+        "images": [
+          "/case-studies/24-672-ps3/01.jpg",
+          "/case-studies/24-672-ps3/06.jpg",
+          "/case-studies/24-672-ps3/07.jpg",
+          "/case-studies/24-672-ps3/08.jpg",
+          "/case-studies/24-672-ps3/10.jpg",
+          "/case-studies/24-672-ps3/14.png",
+          "/kit/s18.jpg"
+        ]
+      },
+      "fin": {
+        "images": [
+          "/final phone stand.png"
+        ]
+      }
+    },
+    {
+      "id": "p7",
+      "cat": "prototyping",
+      "t": "Pez Medical Pill Dispenser",
+      "m": "2025. 24-672 PS7",
+      "hero": "/projects/24-672-ps7.jpg",
+      "bg": "#462020",
+      "fg": "#f7d5d4",
+      "brief": "Medicine saves lives, but it can also harm when it is misused or forgotten. Over 96,000 people a year die from drug overdose, and conditions such as dementia and Alzheimer's lead some patients to miss doses. This project rethinks the pill bottle as a monitored, contained dispenser. A proximity sensor in the cap tracks how many pills remain and a motion detector counts how often it is opened, so a doctor, family member or emergency contact can be told when medicine runs low or is misused. An acrylic window shows the contents at a glance, and a new dispensing mechanism replaces the hinged lid.",
+      "tools": [
+        "SolidWorks",
+        "3D printing filament",
+        "Acrylic",
+        "Clay modeling",
+        "Proximity sensor",
+        "Motion detector"
+      ],
+      "sk": {
+        "images": [
+          "/case-studies/24-672-ps7/01.jpg",
+          "/case-studies/24-672-ps7/02.jpg",
+          "/case-studies/24-672-ps7/09.jpg",
+          "/case-studies/24-672-ps7/10.jpg"
+        ]
+      },
+      "ide": {
+        "images": [
+          "/case-studies/24-672-ps7/15.jpg"
+        ]
+      },
+      "cad": {
+        "images": [
+          "/case-studies/24-672-ps7/07.jpg",
+          "/case-studies/24-672-ps7/08.jpg",
+          "/case-studies/24-672-ps7/11.jpg"
+        ]
+      },
+      "fin": {
+        "images": [
+          "/case-studies/24-672-ps7/03.jpg",
+          "/case-studies/24-672-ps7/04.jpg",
+          "/case-studies/24-672-ps7/05.jpg",
+          "/case-studies/24-672-ps7/06.jpg",
+          "/case-studies/24-672-ps7/12.jpg",
+          "/case-studies/24-672-ps7/13.jpg",
+          "/case-studies/24-672-ps7/14.jpg"
+        ]
+      },
+      "vid": "/case-studies/24-672-ps7/process.mp4",
+      "documents": [
+        {
+          "title": "PS7 Proposal",
+          "file": "/case-studies/24-672-ps7/ps7-proposal.pdf"
+        }
+      ]
+    },
+    {
+      "id": "rb",
+      "cat": "design",
+      "t": "Rink at the Brink",
+      "m": "A fan-forward live entertainment framework",
+      "hero": "/kit/rb_hero.jpg",
+      "bg": "#2b303b",
+      "fg": "#d4e0f7",
+      "tools": [
+        "Python",
+        "pygame",
+        "Boids flocking algorithm"
+      ],
+      "secs": [
+        {
+          "title": "Project brief",
+          "text": "A fan-forward live entertainment framework focusing on temporal movement and nuanced crowd control. Modular flooring can seamlessly move artist and audience through the space, creating a truly moving experience.<br><br>Team: Sarah Chen, Ahmad Salman and Isaac Martinotti.",
+          "images": [
+            "/kit/rb_1.jpg",
+            "/kit/rb_3.jpg"
+          ]
+        },
+        {
+          "title": "User journey",
+          "text": "The existing concert structure runs from Pre-Event through Experience to Post-Event: Planning (discovery and coordinating around the event), Anticipation (time before and within the concert hall), Experience (watching the artist perform onstage), Fulfillment (purchasing merch) and Legacy (telling others about the event).<br><br>The proposed journey follows the fan's action across Pre-Event, Event and Post Event: enter the building; engage with the pre event booths, unlocking perks; the concert starts and the audience is moved by holotiles; the artist comes closer to the user; a map of movement within the space leads to personalized merch.",
+          "images": [
+            "/kit/rb_4.jpg",
+            "/kit/rb_20.jpg"
+          ]
+        },
+        {
+          "title": "Thoughts and leverage points",
+          "text": "Three leverage points: Anticipation, Experience and Fulfillment. How can we leverage pre show anticipation to enhance the day of experience? How can we leverage the communal nature of live music to deepen the fulfillment of the show? How can we give individuals a more personalized and artist connected experience to look back on?<br><br>The overview idea for the general space answers each one: pre show experiences that entice and excite, modular flooring that adds dynamism and enhances interaction, and an artifact of the fan's journey during the performance.<br><br><b>Communal</b> leads to Experience: inherent to live music, gamify the gathering experience, reward group commitment and interaction. <b>Personalized</b> leads to Anticipation, Experience and Fulfillment: tracking the solo pre show journey, allowing proto parasocial closeness to exaggerate fan and artist interaction, and individually rewarding attendees that participate in gamified experiences.",
+          "images": [
+            "/kit/rb_5.jpg",
+            "/kit/rb_6.jpg",
+            "/kit/rb_7.jpg"
+          ]
+        },
+        {
+          "title": "The concept and the space",
+          "text": "<b>The Rink</b> is semi spherical: a central focus for shared experiences, a multifunctional space due to inherent gaze control, a full amphitheatrum experience maximizing value and high quality seating, a flat form that keeps individual patrons feeling equal, and high flexibility of interior volume.<br><br><b>The Brink</b> uses a contemporary modular floor system to choreograph visitors around a large space: movement between prebuilt sets, a safe blur of the boundary between artist and fan, an extra dimensional canvas for haptic feedback and artistic expression, and control of audience gaze.<br><br>Possible implementations: Concert View, Play View and Game Show.",
+          "images": [
+            "/kit/rb_8.jpg",
+            "/kit/rb_9.jpg",
+            "/kit/rb_10.jpg",
+            "/kit/rb_13.jpg",
+            "/kit/rb_14.jpg",
+            "/kit/rb_15.jpg",
+            "/kit/rb_16.jpg"
+          ]
+        },
+        {
+          "title": "Technical overview",
+          "text": "Boids, the 1986 flocking algorithm based on the work of Craig Reynolds, is used as a safety net and crowd deterrent. A preliminary Python and pygame prototype runs agents that move away from one another and resist a mouse pointer. Eye Level is the novel concert experience it enables.",
+          "images": [
+            "/kit/rb_17.jpg",
+            "/kit/rb_19.jpg"
+          ]
+        },
+        {
+          "title": "Storyboard",
+          "text": "<b>Pre show:</b> booths with activities to build anticipation for the show to come. A customized webapp prompts you from your ticket to explore once entered, unlocks perks depending on activity within the space, and picks the first twenty who order merch on site to get in close proximity to the artist during the concert.<br><br><b>Show:</b> modular flooring that can move artist, sets and audiences, enabling more dynamic and exciting performances. In collaboration with the audience, the artist prompts the crowd to scream, moves closer based on noise level, and rewards the loudest sections by getting closer to them.<br><br><b>Post show:</b> variable calls to action to support the artist and promote the venue. A notification from the ticket app arrives after the show, a map visualization of your movements is sent to your phone, and a call to action invites you to pick up a shirt with your movement printed on it as a digital artefact of your concert experience.",
+          "images": [
+            "/kit/rb_21.jpg",
+            "/kit/rb_22.jpg",
+            "/kit/rb_23.jpg",
+            "/kit/rb_24.jpg",
+            "/kit/rb_25.jpg",
+            "/kit/rb_26.jpg"
+          ]
+        },
+        {
+          "title": "Next steps",
+          "text": "Finalize the flocking system to work with various tracking algorithms. Extend an existing event venue application to provide individual information. Utilize tracking information to generate mapped splines for merchandise. Continue architectural development of the proposed venue. Finalize the tech diagram with vendors to ensure feasibility. Work with financiers to understand scope, cost and timeline for recoup. Seed interest in desirable locations for a potential initial testing venue.",
+          "images": [
+            "/kit/rb_28.jpg"
+          ]
+        }
+      ]
     }
-   ],
-   "extra": [
-    {
-     "title": "Executive Summary",
-     "text": "Our product is an expandable hard-shell suitcase, otherwise known as the Expandy-Mandy. It has a compact and expanded mode, increasing in size from 26 to 34 inches in height. The compact size is designed to be within carry-on dimensions, and the expanded size is ideal for checking on longer flights."
-    },
-    {
-     "title": "Design Solution",
-     "text": "The main objective is to give users additional storage for personal items and purchases when traveling. From surveyors, people ran into issues with overpacking and overweight luggage, luggage that is easily damaged or broken, and lacks structure for protecting objects inside of it. There are also personal stories of buying additional luggage during travel because additional items were purchased, or throwing away items because their bag is too small to carry new purchases back home."
-    },
-    {
-     "title": "Expansion mechanism",
-     "text": "The expansion mechanism was inspired by the operations of a suitcase handle. That system includes a button, button housing, and two inner and outer rods, each containing a pusher-pin mechanism and a thin metal rod. Inside the pusher-pin mechanism housing is a plunger, two springs, one vertical and one horizontal, and a metal pin with a slanted interior cut. The inner rod has holes cut outside along its vertical, large enough for the pin to stick through. The outer rod visually conceals the handle’s operation."
-    }
-   ]
+  ],
+  "sectionTitles": {
+    "brief": "Project brief",
+    "tools": "Tools used",
+    "sk": "Sketches",
+    "ide": "User Research and Prototyping",
+    "cad": "CAD models",
+    "tech": "Technical drawings",
+    "fin": "Final project",
+    "vid": "Video",
+    "docs": "Documents"
   },
-  {
-   "id": "ach",
-   "cat": "engineering",
-   "t": "Astronaut Coat Rack",
-   "m": "2024. 24-262",
-   "hero": "/projects/spaceship-hanger.png",
-   "brief": "The goal of this project was to create a frame that was able to hold 40 pounds and 10 pounds respectively with tight size constraints while also making it as light as possible. The theme of the project was space, as we were designing a coat rack for astronauts on Mars, where the gravitational pull was much less than Earth, causing their suits to weigh 40 pounds and their helmets 10. Our design had to be able to hold both items, ensuring that they were at least 1 inch apart. With that in mind, we were designing with the goal of a factor of safety of at least one. This was a group project where we made our designs to accomplish this task.<br><br>Later on in another course, we were tasked with the challenge of turning our hangar into a 3D model. We needed to account for the fact that there were different stresses involved in the process now.",
-   "tools": [
-    "SolidWorks",
-    "FEA"
-   ],
-   "sk": {
-    "text": "This was the prototype I designed as we were working with different design languages and potential shapes that we could use to get our desired result.",
-    "images": [
-     "/case-studies/spaceship-hanger/07.png"
-    ]
-   },
-   "ide": {
-    "text": null,
-    "images": []
-   },
-   "cad": {
-    "text": "From here we used our knowledge in SolidWorks to best iterate on this design so that we could imagine how this project would look in a 3D space, which we rendered with SolidWorks.",
-    "images": [
-     "/case-studies/spaceship-hanger/01.png",
-     "/case-studies/spaceship-hanger/03.png",
-     "/case-studies/spaceship-hanger/05.png",
-     "/case-studies/spaceship-hanger/09.png",
-     "/case-studies/spaceship-hanger/10.png",
-     "/case-studies/spaceship-hanger/11.jpg",
-     "/case-studies/spaceship-hanger/12.png",
-     "/case-studies/spaceship-hanger/13.png"
-    ]
-   },
-   "fin": {
-    "text": "By designing it in SolidWorks, we could run FEA and often got a factor of safety much less than our desired result. We wanted an FOS of 1 while still maintaining that original vision. It was then that we decided to think in terms of strengthening the existing supports to ensure that the project would still be able to hold the necessary load even in the 3D space the objects now resided in.",
-    "images": []
-   },
-   "bg": "#e6e6db",
-   "fg": "#343409"
-  },
-  {
-   "id": "bridge",
-   "cat": "engineering",
-   "t": "Bridge",
-   "m": "2023",
-   "hero": "/projects/bridge.jpeg",
-   "brief": "Our project was to build a bridge that would be able to sustain the weight of a human being while also remaining as light as possible. We were given a limited number of bars to work with that couldn't exceed 17 by 12 inches. After 4 weeks of construction, this was the end result.",
-   "tools": [],
-   "sk": {
-    "text": null,
-    "images": []
-   },
-   "ide": {
-    "text": null,
-    "images": []
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "bg": "#e1d6cc",
-   "fg": "#341e09"
-  },
-  {
-   "id": "rob",
-   "cat": "engineering",
-   "t": "Robotics",
-   "m": "2023",
-   "hero": "/projects/robotics.jpg",
-   "brief": "As Captain of my school's FIRST robotics team, I had a lot of responsibilities, one of which included being our main designer when it came to building our robot. Coming off a 2 year hiatus due to the pandemic, we had to start from scratch with our old team's design being obsolete and in disrepair. I took on the job of designing the initial core features of our robot to perform a variety of tasks such as grabbing and moving blocks using a claw as our intake, being able to move omni directionally, being able to mount and hold a battery and phone as well as other things.",
-   "tools": [],
-   "sk": {
-    "text": "This is the version one drawing that was created in order to accomplish this task.",
-    "images": [
-     "/case-studies/robotics/01.jpg",
-     "/case-studies/robotics/02.jpg"
-    ]
-   },
-   "ide": {
-    "text": "Version 1.5 is the physical recreation of that robot. We worked on the design and the mechanics for 7 weeks, with this design ultimately taking us to the NY qualifiers. Adding an extendable arm that let us place the blocks we picked and wheels on the side to spin the disk holding our objective, our robot was meticulously designed to be good at traversal and retrieval but able to do everything if need be.",
-    "images": [
-     "/case-studies/robotics/03.jpg",
-     "/case-studies/robotics/04.jpg",
-     "/case-studies/robotics/05.jpg",
-     "/case-studies/robotics/06.jpg",
-     "/case-studies/robotics/07.jpg",
-     "/case-studies/robotics/08.jpg"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": "Version 2: We constantly iterated the design to continue to improve on our objectives of speed and retrieval.",
-    "images": []
-   },
-   "bg": "#3b372b",
-   "fg": "#f7f0d4"
-  },
-  {
-   "id": "nf",
-   "cat": "design",
-   "t": "Netflix: Hansel & Gretel",
-   "m": "2025. A Netflix live experience",
-   "hero": "/projects/hansel-and-gretel.png",
-   "brief": "The ask: develop an experience that brings Hansel & Gretel to life in the 21st century, focused on shareability and virality. The experience immerses groups in a gripping escape, blending augmented reality within a physical restaurant space as they race to escape the candy-coated escape room of Hansel and Gretel. It is a physical experience and promotional rollout that brings a familiar story into a darker, contemporary world. Team: Elizabeth Wang, Ahmad Salman, Carissa Chou and Phoebe Lee. I was the product designer, in charge of building and coding the physical components while sticking to the theme.",
-   "tools": [
-    "Figma",
-    "SolidWorks",
-    "Unity",
-    "Fusion 360",
-    "Arduino",
-    "AR headset"
-   ],
-   "sk": {
-    "text": "Branding and poster studies: the HANSEL & GRETEL name, the H+G logo, and a set of Netflix posters with a 10.31.2024 date and the line that some things are not as sweet as they appear.",
-    "images": [
-     "/case-studies/hansel-and-gretel/package/invites-you-1.png",
-     "/case-studies/hansel-and-gretel/package/invites-you-2.png",
-     "/case-studies/hansel-and-gretel/package/invites-you-3.png",
-     "/case-studies/hansel-and-gretel/package/invites-you.png",
-     "/case-studies/hansel-and-gretel/package/tabloid---1.jpg",
-     "/case-studies/hansel-and-gretel/package/tabloid---3.jpg"
-    ]
-   },
-   "ide": {
-    "text": "The tech diagram maps how one computer links a Bluetooth speaker in the oven for audio, lighting changes, an Arduino driving LEDs, Bluetooth and motors, and Unity delivering new clues to the headsets. The location parti plans a 300 foot site: a 2,500 sq ft restaurant, 1,500 sq ft kitchen, 600 sq ft lobby and bathrooms, and escape rooms of 600 sq ft each with a game master room and tech booth.",
-    "images": [
-     "/case-studies/hansel-and-gretel/package/pexels-cottonbro-5985180.jpg"
-    ]
-   },
-   "cad": {
-    "text": "The rendering and physical mock-up show a toaster oven with two spinning plates on top that react to the player. The oven houses the digital-to-physical hardware, with the Arduino controlling lights and motors while Unity handles the AR clues.",
-    "images": [
-     "/kit/hg_cad0.jpg",
-     "/kit/hg_cad1.jpg",
-     "/kit/hg_cad2.jpg"
-    ]
-   },
-   "fin": {
-    "text": "Players interact using digital-to-physical hardware and the experience starts. Solving clues in the digital space triggers indicators showing what is needed in the physical world to progress. When they finish, both an auditory and visual indicator signal the end of the experience.",
-    "images": [
-     "/kit/hg_fin0.jpg",
-     "/kit/hg_fin1.jpg",
-     "/kit/hg_fin2.jpg",
-     "/case-studies/hansel-and-gretel/package/final-1.jpg",
-     "/case-studies/hansel-and-gretel/package/final-2.jpg",
-     "/case-studies/hansel-and-gretel/package/final-3.jpg",
-     "/case-studies/hansel-and-gretel/package/final-4.jpg"
-    ]
-   },
-   "documents": [
-    {
-     "title": "Invitation 1",
-     "file": "/case-studies/hansel-and-gretel/package/frame-6.pdf"
-    },
-    {
-     "title": "Invitation 2",
-     "file": "/case-studies/hansel-and-gretel/package/frame-6-1.pdf"
-    },
-    {
-     "title": "Invitation 3",
-     "file": "/case-studies/hansel-and-gretel/package/frame-6-2.pdf"
-    },
-    {
-     "title": "Invitation 4",
-     "file": "/case-studies/hansel-and-gretel/package/frame-6-3.pdf"
-    }
-   ],
-   "bg": "#3b2b2b",
-   "fg": "#f7d4d5",
-   "vid": "/case-studies/hansel-and-gretel/key-touchpoint-oven.mp4"
-  },
-  {
-   "id": "desk",
-   "cat": "design",
-   "t": "Ever Changing Desk",
-   "m": "2024. 51-261",
-   "hero": "/projects/51-261-ever-changing-desk.jpg",
-   "brief": "<b>The Prompt:</b> A major manufacturer of office paper and storage products has identified a new market segment, college students. As an introduction to this market, it was decided to first focus on desk accessories, more specifically personal storage units. Using yourself as the consumer, your challenge was to design a desktop/work storage unit that addresses the following criteria: it must be able to support four items commonly used in your working/study environment; thoughtful considerations on how people (you) interact with it are important; it will be sold in major distribution centers and therefore must be stackable vertically and horizontally; the marketing group has determined that sharp square or rectangular forms and features would best distinguish their product from the softer form aesthetics currently offered by the competition.<br><br><b>User Persona:</b> The user, a sophomore in Mechanical Engineering, finds himself grappling with keeping a healthy and productive work environment amidst the variety of equipment he carries for his classes. The user needs a dynamic workspace that can adapt to different environments. Not only to accommodate his changing surroundings, Ahmad envisions a workspace that aligns with his on the go work balance that can also help increase productivity and a cleaner lifestyle.",
-   "tools": [],
-   "sk": {
-    "text": "Initial concepts in regards to the design language of the modular desk. After going over the prompt, I went through multiple iterations of designs. The goal was a sleek unobtrusive design that allowed for decent organization and was mobile. Eventually, I landed in this area of design.",
-    "images": []
-   },
-   "ide": {
-    "text": "<b>Key Observations and Insight:</b> Users' workspace is highly mobile and rarely in one location for a typical day. The user seems to take up all the available space in a room no matter how big the area is. The user has a lot of items that should be separated.<br><br><b>Stands:</b> The goal of my project is to build a portable desk. The stands in my design have the goal of elevating the object, encouraging productivity as well as being a place to contain both materials and the space of the workable area.<br><br><b>Boxes:</b> The boxes in this case would be modular containers on the go that would allow the stacking and separation of materials depending on the situation. These would be built to be stackable and be able to view the contents of the box without needing to be opened.",
-    "images": []
-   },
-   "cad": {
-    "text": "Finalized concept drawing for the stand, finalized box design, and prototype drawing with views.",
-    "images": []
-   },
-   "fin": {
-    "text": "Actual product in use.<br><br><b>Takeaways:</b> From this experience, I learned the importance of considering all parts of the product in order to develop the full set of measurements. I realized one failsafe method to be used in the future could incorporate CAD modeling, as in SolidWorks or Fusion 360. This experience helped me to understand the mechanical properties of cardboard, wood and other simple materials. I've now come to understand the importance of rapid prototyping to see if an idea would be realistic in a way that wouldn't take a toll on what resources we have available.",
-    "images": []
-   },
-   "secs": [
-    {
-     "title": "Project brief",
-     "text": "<b>The Prompt:</b> A major manufacturer of office paper and storage products has identified a new market segment, college students. As an introduction to this market, it was decided to first focus on desk accessories, more specifically personal storage units. Using yourself as the consumer, your challenge was to design a desktop/work storage unit that addresses the following criteria: it must be able to support four items commonly used in your working/study environment; thoughtful considerations on how people (you) interact with it are important; it will be sold in major distribution centers and therefore must be stackable vertically and horizontally; the marketing group has determined that sharp square or rectangular forms and features would best distinguish their product from the softer form aesthetics currently offered by the competition.<br><br><b>User Persona:</b> The user, a sophomore in Mechanical Engineering, finds himself grappling with keeping a healthy and productive work environment amidst the variety of equipment he carries for his classes. The user needs a dynamic workspace that can adapt to different environments. Not only to accommodate his changing surroundings, Ahmad envisions a workspace that aligns with his on the go work balance that can also help increase productivity and a cleaner lifestyle.",
-     "images": []
-    },
-    {
-     "title": "Research and observations",
-     "text": "<b>Observation 1: Never at home.</b> The user's workspace is highly mobile and rarely in one location for the duration of a typical day.<br><br><b>Observation 2: Takes up a lot of space.</b> The user seems to take up all the available space in a room no matter how big the area is.<br><br><b>Observation 3: Has a lot of items that should be separated.</b> I have a range of digital and physical items I use and they are often either dead at odds or taking up a lot of space. I often have wires just around.",
-     "images": [
-      "/case-studies/51-261-ever-changing-desk/10.jpg"
-     ]
-    },
-    {
-     "title": "Features needed",
-     "text": "<b>Must haves:</b> light; portable; a sleek design that matches the black, gray and brown aesthetic of my devices.<br><br><b>Avoids:</b> being too clunky or out of place; it should be able to fit in a 3 by 9 inch area without issue; it should not interfere with any other workspace.",
-     "images": []
-    },
-    {
-     "title": "Sketches",
-     "text": "Some sketches of design for boxes and stands for the modular desk design. Goals for the modular desk: stands and boxes. Three directions were explored: Design 1 Lego Blocks, Design 2 Flower Pots and Design 3 Variable Height Stand. I chose the foldable box as a way for the user to save space with that added bit of modularity.",
-     "images": [
-      "/case-studies/51-261-ever-changing-desk/03.png",
-      "/case-studies/51-261-ever-changing-desk/04.png",
-      "/case-studies/51-261-ever-changing-desk/05.png",
-      "/case-studies/51-261-ever-changing-desk/06.png",
-      "/case-studies/51-261-ever-changing-desk/07.png",
-      "/case-studies/51-261-ever-changing-desk/08.png",
-      "/case-studies/51-261-ever-changing-desk/09.jpg"
-     ]
-    },
-    {
-     "title": "The process",
-     "text": "<b>Stands:</b> The goal of my project is to build a portable desk. The stands in my design have the goal of elevating the object, encouraging productivity as well as being a place to contain both materials and the space of the workable area.<br><br><b>Boxes:</b> The boxes in this case would be modular containers on the go that would allow the stacking and separation of materials depending on the situation. Stackable boxes are clear boxes that can stack on one another. They are closable cubes that have a sliding lid and nubs on the bottom, with magnetic clips to stack and connect to the stands. Foldable boxes can be folded and fit to increase space and mobility.",
-     "images": [
-      "/case-studies/51-261-ever-changing-desk/11.jpg"
-     ]
-    },
-    {
-     "title": "Materials and prototype",
-     "text": "<b>Stand:</b> 1/4 inch wood, duct tape, cardboard, hot glue. <b>Box:</b> 1/4 inch wood, plastic film, cardboard, hot glue.<br><br><b>Pros:</b> the stand is strong and lightweight, supports the modular design and creates a workable area; the box has good visibility, is modular and is secure. <b>Cons:</b> a mobility issue, folding the wrong way, and durability.",
-     "images": []
-    },
-    {
-     "title": "Takeaways and next steps",
-     "text": "<b>Takeaways:</b> From this experience, I learned the importance of considering all parts of the product in order to develop the full set of measurements. I realized one failsafe method to be used in the future could incorporate CAD modeling, as in SolidWorks or Fusion 360. This experience helped me to understand the mechanical properties of cardboard, wood and other simple materials. I've now come to understand the importance of rapid prototyping to see if an idea would be realistic in a way that wouldn't take a toll on what resources we have available.<br><br><b>For the future:</b> construct a hinge part to ensure the folding of the stand is achieved; use a different material like cloth or a thinner re-bent plastic piece to get the folding correct on the box; leave more room for error when cutting materials.",
-     "images": [
-      "/case-studies/51-261-ever-changing-desk/01.jpg",
-      "/case-studies/51-261-ever-changing-desk/12.jpg"
-     ]
-    }
-   ],
-   "bg": "#3b352b",
-   "fg": "#d4eaf7"
-  },
-  {
-   "id": "ipc",
-   "cat": "design",
-   "t": "iPad Cover Prototypes",
-   "m": "2023",
-   "hero": "/projects/ipad-cover-prototypes.jpg",
-   "brief": "As a student, the tools I use to keep up in the academic life that I exist in are an absolute necessity in my everyday life. However, when using my iPad 9, I found myself unsatisfied specifically with the case options. They lacked the ergonomic or creative designs that represented the colors and UI that Apple provided, while also being limited in function or increasingly out of my budget as a college student. That's why I decided to take a chance to make a design that best suited my needs.",
-   "tools": [],
-   "sk": {
-    "text": "V.1 of my design: early conceptualization of colors and section breakdowns. This is where I decided to begin experimenting on how my potential ideal iPad case would be. In many cases, as well as iPads, we have more fillet corners on the device, softer curves to rest more comfortably in the user's hands. In my initial design, I wanted to invoke a slightly more drastic design change, opting for harsher corners to emphasize the display and give the iPad more of a floating screen dynamic rather than a notebook, to increase the area viewed to the area used, taking inspiration from clipboards.",
-    "images": [
-     "/case-studies/ipad-cover-prototypes/03.jpg",
-     "/case-studies/ipad-cover-prototypes/04.jpg"
-    ]
-   },
-   "ide": {
-    "text": "Here was V.2 of my design with exact measurements of possible folding configurations and how exactly I wanted my hinge to work, with multiple hinge designs to test for ease of use and strength.",
-    "images": [
-     "/case-studies/ipad-cover-prototypes/01.jpg",
-     "/case-studies/ipad-cover-prototypes/02.jpg",
-     "/case-studies/ipad-cover-prototypes/05.jpg",
-     "/case-studies/ipad-cover-prototypes/06.jpg"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "bg": "#273b3f",
-   "fg": "#d4ecf7"
-  },
-  {
-   "id": "ssm",
-   "cat": "design",
-   "t": "Spaceship Model",
-   "m": "2023",
-   "hero": "/projects/spaceship-model.png",
-   "brief": "A personal project of mine. I just wanted to see if I could make my concept a reality, so I went and made a mock-up of the way I wanted my prop to come out. For years I was a huge fan of Star Wars and I wanted to make my rendition of the ship and how it would look if I took a look at it.",
-   "tools": [],
-   "sk": {
-    "text": null,
-    "images": []
-   },
-   "ide": {
-    "text": null,
-    "images": []
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "bg": "#3b2b2b",
-   "fg": "#f7d4d4"
-  },
-  {
-   "id": "ux",
-   "cat": "design",
-   "t": "UX Design 1",
-   "m": "2023. Magazine Design",
-   "hero": "/projects/ux-design.png",
-   "brief": "Throughout the fall semester I had a variety of projects and side interests that I did, whether for class or my own. This particular project was our end of semester assignment in which we were required to make a magazine, and this was the result of 6 weeks worth of work.",
-   "tools": [
-    "Photoshop",
-    "Illustrator",
-    "InDesign"
-   ],
-   "sk": {
-    "text": null,
-    "images": []
-   },
-   "ide": {
-    "text": "For this project I designed three potential design systems in order to see which would best represent the themes I wanted my magazine to adhere to. I would choose a color palette, limiting myself to three colors and to one of their shades, basing my design around that. I also created mood boards for each of my design systems to see just how the colors would interact if combined. This process relied heavily on me considering my intended target audience and what exactly I wanted to say about the topic I had selected to be my magazine.",
-    "images": [
-     "/case-studies/ux-design/01.png",
-     "/case-studies/ux-design/03.png",
-     "/case-studies/ux-design/05.png",
-     "/case-studies/ux-design/07.png",
-     "/case-studies/ux-design/09.png",
-     "/case-studies/ux-design/11.png"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": "These are the finalized spreads that I ended up completing at the end of the five weeks. My goal when creating these slides was to evoke my subject matter even without the reader needing to read the entire passage to understand. Throughout the piece, buildings, bricks, and murals are a constant design choice to convey murals and street art. The presence of paint dripping and physical pictures of murals help to emphasize the article and keep the reader's attention. This piece was experimental and took a lot of time, but the end result came together to bring the concept to life.<br><br>This was the Instagram portion of the project, where the goal was to convey our magazine in a bite sized format that was easily recognizable and able to appear on various social media such as Instagram. For me, the idea I had in mind was obvious, as I thought nothing best represented the topic as much as the cover did to get across the story as well as show off the creative elements that would be consistent through the entire design.",
-    "images": []
-   },
-   "bg": "#4f1c17",
-   "fg": "#f7e6d4"
-  },
-  {
-   "id": "skb",
-   "cat": "design",
-   "t": "Sketchbook",
-   "m": "2023",
-   "hero": "/projects/project.jpg",
-   "brief": "",
-   "tools": [],
-   "sk": {
-    "text": null,
-    "images": [
-     "/case-studies/project/01.jpg",
-     "/case-studies/project/02.jpg",
-     "/case-studies/project/03.jpg",
-     "/case-studies/project/04.jpg",
-     "/case-studies/project/05.jpg",
-     "/case-studies/project/06.jpg",
-     "/case-studies/project/07.jpg",
-     "/case-studies/project/08.jpg",
-     "/case-studies/project/09.jpg",
-     "/case-studies/project/10.jpg",
-     "/case-studies/project/11.jpg",
-     "/case-studies/project/12.jpg",
-     "/case-studies/project/13.jpg",
-     "/case-studies/project/14.jpg",
-     "/case-studies/project/15.jpg",
-     "/case-studies/project/16.jpg",
-     "/case-studies/project/17.jpg",
-     "/case-studies/project/18.jpg",
-     "/case-studies/project/19.jpg",
-     "/case-studies/project/20.jpg",
-     "/case-studies/project/21.jpg",
-     "/case-studies/project/22.jpg",
-     "/case-studies/project/23.jpg",
-     "/case-studies/project/24.jpg",
-     "/case-studies/project/25.jpg",
-     "/case-studies/project/26.jpg",
-     "/case-studies/project/27.jpg",
-     "/case-studies/project/28.jpg",
-     "/case-studies/project/29.jpg",
-     "/case-studies/project/30.jpg",
-     "/case-studies/project/31.jpg",
-     "/case-studies/project/32.jpg",
-     "/case-studies/project/33.jpg",
-     "/case-studies/project/34.jpg",
-     "/case-studies/project/35.jpg",
-     "/case-studies/project/36.jpg",
-     "/case-studies/project/37.jpg",
-     "/case-studies/project/38.jpg",
-     "/case-studies/project/39.jpg",
-     "/case-studies/project/40.jpg",
-     "/case-studies/project/41.jpg",
-     "/case-studies/project/42.jpg",
-     "/case-studies/project/43.jpg",
-     "/case-studies/project/44.jpg",
-     "/case-studies/project/45.jpg",
-     "/case-studies/project/46.jpg",
-     "/case-studies/project/47.jpg",
-     "/case-studies/project/48.jpg",
-     "/case-studies/project/49.jpg",
-     "/case-studies/project/50.jpg",
-     "/case-studies/project/51.jpg",
-     "/case-studies/project/52.jpg",
-     "/case-studies/project/53.jpg",
-     "/case-studies/project/54.jpg",
-     "/case-studies/project/55.jpg",
-     "/case-studies/project/56.jpg",
-     "/case-studies/project/57.jpg",
-     "/case-studies/project/58.jpg",
-     "/case-studies/project/59.jpg",
-     "/case-studies/project/60.jpg",
-     "/case-studies/project/61.jpg",
-     "/case-studies/project/62.jpg",
-     "/case-studies/project/63.jpg",
-     "/case-studies/project/64.jpg",
-     "/case-studies/24-672-ps6/01.jpg",
-     "/case-studies/24-672-ps6/02.jpg",
-     "/case-studies/24-672-ps6/03.jpg",
-     "/case-studies/24-672-ps6/04.jpg",
-     "/case-studies/24-672-ps6/05.jpg",
-     "/case-studies/24-672-ps6/06.jpg",
-     "/case-studies/24-672-ps6/07.jpg",
-     "/case-studies/24-672-ps6/08.jpg",
-     "/case-studies/24-672-ps6/09.jpg",
-     "/case-studies/24-672-ps6/10.jpg"
-    ]
-   },
-   "ide": {
-    "text": null,
-    "images": []
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "bg": "#3b2b2b",
-   "fg": "#f7d4d4"
-  },
-  {
-   "id": "ch",
-   "cat": "prototyping",
-   "t": "Clay Headphones",
-   "m": "2025. 24-672 PS5",
-   "hero": "/projects/24-672-ps5.jpg",
-   "brief": "",
-   "tools": [],
-   "sk": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps5/03.jpg",
-     "/case-studies/24-672-ps5/04.jpg",
-     "/case-studies/24-672-ps5/05.jpg"
-    ]
-   },
-   "ide": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps5/02.jpg",
-     "/case-studies/24-672-ps5/07.jpg",
-     "/case-studies/24-672-ps5/09.jpg"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps5/08.jpg"
-    ]
-   },
-   "bg": "#3e3028",
-   "fg": "#f7e0d4"
-  },
-  {
-   "id": "tc",
-   "cat": "prototyping",
-   "t": "Transformative Container",
-   "m": "2025. 24-672 PS2",
-   "hero": "/projects/ps2.jpg",
-   "brief": "<b>Goal:</b> Design a takeout box, or any other container, that can be transformed into another object to create a dual purpose container. Your design can either improve on the existing traditional takeout box or you can create an entirely new container from scratch. The transformation process cannot require the use of additional tools, and once transformed, it does not need to be able to return to its original shape. The container can be made of any kind of thick paper of your choosing but you may not use glue or any other type of adhesive. There are no limitations in the size of your product or how much material you use.<br><br><b>Design:</b> My design is a transformative to go box that can be used as a bowl and carried with two handles like a bag. Once open there is a cylindrical repository for items to be placed. The cylinder container can be moved and works separately from the original container. The goal would be to have two separate containers for different items. As an example, filling the base with a salad and the cylinder with toppings was a potential use case for this product.",
-   "tools": [
-    "Cardstock",
-    "Box cutter",
-    "Hot glue"
-   ],
-   "sk": {
-    "text": null,
-    "images": [
-     "/case-studies/ps2/07.jpg",
-     "/case-studies/ps2/08.jpg",
-     "/case-studies/ps2/09.jpg"
-    ]
-   },
-   "ide": {
-    "text": null,
-    "images": [
-     "/case-studies/ps2/01.jpg",
-     "/case-studies/ps2/02.jpg",
-     "/case-studies/ps2/03.jpg",
-     "/case-studies/ps2/04.jpg",
-     "/case-studies/ps2/05.jpg",
-     "/case-studies/ps2/06.jpg"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "bg": "#dcdcd0",
-   "fg": "#091334"
-  },
-  {
-   "id": "p3",
-   "cat": "prototyping",
-   "t": "Phone holder",
-   "m": "2025. 24-672 PS3",
-   "hero": "/projects/24-672-ps3.jpg",
-   "brief": "",
-   "tools": [],
-   "sk": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps3/03.jpg",
-     "/case-studies/24-672-ps3/04.jpg",
-     "/case-studies/24-672-ps3/05.jpg",
-     "/case-studies/24-672-ps3/11.jpg",
-     "/case-studies/24-672-ps3/12.jpg",
-     "/case-studies/24-672-ps3/13.jpg"
-    ]
-   },
-   "ide": {
-    "text": "Physical models in cardboard, aluminium rods and springs tested the mechanism and the phone holding before committing to the final build in acrylic.",
-    "images": [
-     "/case-studies/24-672-ps3/01.jpg",
-     "/case-studies/24-672-ps3/06.jpg",
-     "/case-studies/24-672-ps3/07.jpg",
-     "/case-studies/24-672-ps3/08.jpg",
-     "/case-studies/24-672-ps3/10.jpg",
-     "/case-studies/24-672-ps3/14.png",
-     "/kit/s18.jpg"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "bg": "#edd6c0",
-   "fg": "#341c09"
-  },
-  {
-   "id": "p7",
-   "cat": "prototyping",
-   "t": "Pez Medical Pill Dispenser",
-   "m": "2025. 24-672 PS7",
-   "hero": "/projects/24-672-ps7.jpg",
-   "brief": "Medicine saves lives, but it can also harm when it is misused or forgotten. Over 96,000 people a year die from drug overdose, and conditions such as dementia and Alzheimer's lead some patients to miss doses. This project rethinks the pill bottle as a monitored, contained dispenser. A proximity sensor in the cap tracks how many pills remain and a motion detector counts how often it is opened, so a doctor, family member or emergency contact can be told when medicine runs low or is misused. An acrylic window shows the contents at a glance, and a new dispensing mechanism replaces the hinged lid.",
-   "tools": [
-    "SolidWorks",
-    "3D printing filament",
-    "Acrylic",
-    "Clay modeling",
-    "Proximity sensor",
-    "Motion detector"
-   ],
-   "sk": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps7/01.jpg",
-     "/case-studies/24-672-ps7/02.jpg",
-     "/case-studies/24-672-ps7/09.jpg",
-     "/case-studies/24-672-ps7/10.jpg"
-    ]
-   },
-   "ide": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps7/15.jpg"
-    ]
-   },
-   "cad": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps7/07.jpg",
-     "/case-studies/24-672-ps7/08.jpg",
-     "/case-studies/24-672-ps7/11.jpg"
-    ]
-   },
-   "fin": {
-    "text": null,
-    "images": [
-     "/case-studies/24-672-ps7/03.jpg",
-     "/case-studies/24-672-ps7/04.jpg",
-     "/case-studies/24-672-ps7/05.jpg",
-     "/case-studies/24-672-ps7/06.jpg",
-     "/case-studies/24-672-ps7/12.jpg",
-     "/case-studies/24-672-ps7/13.jpg",
-     "/case-studies/24-672-ps7/14.jpg"
-    ]
-   },
-   "vid": "/case-studies/24-672-ps7/process.mp4",
-   "documents": [
-    {
-     "title": "PS7 Proposal",
-     "file": "/case-studies/24-672-ps7/ps7-proposal.pdf"
-    }
-   ],
-   "bg": "#462020",
-   "fg": "#f7d5d4"
-  },
-  {
-   "id": "rb",
-   "cat": "design",
-   "t": "Rink at the Brink",
-   "m": "A fan-forward live entertainment framework",
-   "hero": "/kit/rb_hero.jpg",
-   "tools": [
-    "Python",
-    "pygame",
-    "Boids flocking algorithm"
-   ],
-   "brief": "",
-   "sk": {
-    "text": null,
-    "images": []
-   },
-   "ide": {
-    "text": null,
-    "images": []
-   },
-   "cad": {
-    "text": null,
-    "images": []
-   },
-   "fin": {
-    "text": null,
-    "images": []
-   },
-   "secs": [
-    {
-     "title": "Project brief",
-     "text": "A fan-forward live entertainment framework focusing on temporal movement and nuanced crowd control. Modular flooring can seamlessly move artist and audience through the space, creating a truly moving experience.<br><br>Team: Sarah Chen, Ahmad Salman and Isaac Martinotti.",
-     "images": [
-      "/kit/rb_1.jpg",
-      "/kit/rb_3.jpg"
-     ]
-    },
-    {
-     "title": "User journey",
-     "text": "The existing concert structure runs from Pre-Event through Experience to Post-Event: Planning (discovery and coordinating around the event), Anticipation (time before and within the concert hall), Experience (watching the artist perform onstage), Fulfillment (purchasing merch) and Legacy (telling others about the event).<br><br>The proposed journey follows the fan's action across Pre-Event, Event and Post Event: enter the building; engage with the pre event booths, unlocking perks; the concert starts and the audience is moved by holotiles; the artist comes closer to the user; a map of movement within the space leads to personalized merch.",
-     "images": [
-      "/kit/rb_4.jpg",
-      "/kit/rb_20.jpg"
-     ]
-    },
-    {
-     "title": "Thoughts and leverage points",
-     "text": "Three leverage points: Anticipation, Experience and Fulfillment. How can we leverage pre show anticipation to enhance the day of experience? How can we leverage the communal nature of live music to deepen the fulfillment of the show? How can we give individuals a more personalized and artist connected experience to look back on?<br><br>The overview idea for the general space answers each one: pre show experiences that entice and excite, modular flooring that adds dynamism and enhances interaction, and an artifact of the fan's journey during the performance.<br><br><b>Communal</b> leads to Experience: inherent to live music, gamify the gathering experience, reward group commitment and interaction. <b>Personalized</b> leads to Anticipation, Experience and Fulfillment: tracking the solo pre show journey, allowing proto parasocial closeness to exaggerate fan and artist interaction, and individually rewarding attendees that participate in gamified experiences.",
-     "images": [
-      "/kit/rb_5.jpg",
-      "/kit/rb_6.jpg",
-      "/kit/rb_7.jpg"
-     ]
-    },
-    {
-     "title": "The concept and the space",
-     "text": "<b>The Rink</b> is semi spherical: a central focus for shared experiences, a multifunctional space due to inherent gaze control, a full amphitheatrum experience maximizing value and high quality seating, a flat form that keeps individual patrons feeling equal, and high flexibility of interior volume.<br><br><b>The Brink</b> uses a contemporary modular floor system to choreograph visitors around a large space: movement between prebuilt sets, a safe blur of the boundary between artist and fan, an extra dimensional canvas for haptic feedback and artistic expression, and control of audience gaze.<br><br>Possible implementations: Concert View, Play View and Game Show.",
-     "images": [
-      "/kit/rb_8.jpg",
-      "/kit/rb_9.jpg",
-      "/kit/rb_10.jpg",
-      "/kit/rb_13.jpg",
-      "/kit/rb_14.jpg",
-      "/kit/rb_15.jpg",
-      "/kit/rb_16.jpg"
-     ]
-    },
-    {
-     "title": "Technical overview",
-     "text": "Boids, the 1986 flocking algorithm based on the work of Craig Reynolds, is used as a safety net and crowd deterrent. A preliminary Python and pygame prototype runs agents that move away from one another and resist a mouse pointer. Eye Level is the novel concert experience it enables.",
-     "images": [
-      "/kit/rb_17.jpg",
-      "/kit/rb_19.jpg"
-     ]
-    },
-    {
-     "title": "Storyboard",
-     "text": "<b>Pre show:</b> booths with activities to build anticipation for the show to come. A customized webapp prompts you from your ticket to explore once entered, unlocks perks depending on activity within the space, and picks the first twenty who order merch on site to get in close proximity to the artist during the concert.<br><br><b>Show:</b> modular flooring that can move artist, sets and audiences, enabling more dynamic and exciting performances. In collaboration with the audience, the artist prompts the crowd to scream, moves closer based on noise level, and rewards the loudest sections by getting closer to them.<br><br><b>Post show:</b> variable calls to action to support the artist and promote the venue. A notification from the ticket app arrives after the show, a map visualization of your movements is sent to your phone, and a call to action invites you to pick up a shirt with your movement printed on it as a digital artefact of your concert experience.",
-     "images": [
-      "/kit/rb_21.jpg",
-      "/kit/rb_22.jpg",
-      "/kit/rb_23.jpg",
-      "/kit/rb_24.jpg",
-      "/kit/rb_25.jpg",
-      "/kit/rb_26.jpg"
-     ]
-    },
-    {
-     "title": "Next steps",
-     "text": "Finalize the flocking system to work with various tracking algorithms. Extend an existing event venue application to provide individual information. Utilize tracking information to generate mapped splines for merchandise. Continue architectural development of the proposed venue. Finalize the tech diagram with vendors to ensure feasibility. Work with financiers to understand scope, cost and timeline for recoup. Seed interest in desirable locations for a potential initial testing venue.",
-     "images": [
-      "/kit/rb_28.jpg"
-     ]
-    }
-   ],
-   "bg": "#2b303b",
-   "fg": "#d4e0f7"
+  "palette": {
+    "Bat Wing": "#7E7B63",
+    "Espresso Martini": "#86440B",
+    "Cane Sugar": "#E8B985",
+    "Secret Passage": "#302910"
   }
- ]
 }
