@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Category, Project } from "./portfolio";
 
-type Block = { text?: string | null; images: string[] };
+type Block = { text?: string | null; images?: string[] };
 const blockKeys = [
   ["sk", "Sketches"],
   ["ide", "Prototypes and documentation"],
@@ -47,7 +47,7 @@ function BlockEditor({
       <Field label="Image paths, one per line">
         <textarea
           rows={3}
-          defaultValue={block.images.join("\n")}
+          defaultValue={(block.images ?? []).join("\n")}
           onBlur={(e) => onChange({ ...block, images: lines(e.target.value) })}
         />
       </Field>

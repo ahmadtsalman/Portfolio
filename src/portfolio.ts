@@ -2,7 +2,9 @@ import data from "./content/portfolio.json";
 
 export type Category = "engineering" | "design" | "prototyping";
 
-type Block = { text?: string | null; images: string[] };
+// Picture size chosen in the editor: large = 1 per row, medium = 2, small = 3.
+export type PictureSize = "default" | "large" | "medium" | "small";
+type Block = { text?: string | null; images?: string[]; size?: PictureSize };
 export type Project = {
   id: string;
   cat: Category;
@@ -20,9 +22,9 @@ export type Project = {
   fin: Block;
   vid?: string;
   documents?: { title: string; file: string }[];
-  extra?: { title: string; text: string }[];
+  extra?: { title: string; text?: string | null; images?: string[]; size?: PictureSize }[];
   titles?: Partial<Record<string, string>>;
-  secs?: { title: string; text?: string | null; images: string[] }[];
+  secs?: { title: string; text?: string | null; images?: string[]; size?: PictureSize }[];
 };
 
 export type Section = {
@@ -34,6 +36,7 @@ export type Section = {
   documents?: { title: string; file: string }[];
   twoAcross?: boolean;
   oneAcross?: boolean;
+  size?: PictureSize;
 };
 
 export const palette = {
@@ -116,12 +119,15 @@ export function sectionsOf(p: Project): Section[] {
   if (p.secs?.length) {
     return p.secs
       .filter((s) => s.text || s.images?.length)
-      .map((s) => ({ title: s.title, text: s.text, images: s.images ?? [], twoAcross: true }));
+      .map((s) => ({ title: s.title, text: s.text, images: s.images ?? [], twoAcross: true, size: s.size }));
   }
   const out: Section[] = [];
   if (p.brief) out.push({ title: T("brief"), text: p.brief });
   if (p.tools?.length) out.push({ title: T("tools"), chips: p.tools });
-  p.extra?.forEach((e) => out.push({ title: e.title, text: e.text }));
+  p.extra?.forEach((e) => {
+    if (e && (e.text || e.images?.length))
+      out.push({ title: e.title, text: e.text, images: e.images ?? [], size: e.size });
+  });
   const blocks: [string, Block | undefined][] = [
     ["sk", p.sk],
     ["ide", p.ide],
@@ -132,9 +138,16 @@ export function sectionsOf(p: Project): Section[] {
   blocks.forEach(([key, b]) => {
     const title = T(key);
     if (b && (b.text || b.images?.length))
-      out.push({ title, text: b.text, images: b.images ?? [], oneAcross: key === "tech" });
+      out.push({ title, text: b.text, images: b.images ?? [], oneAcross: key === "tech", size: b.size });
   });
   if (p.vid) out.push({ title: T("vid"), video: p.vid });
   if (p.documents?.length) out.push({ title: T("docs"), documents: p.documents });
   return out;
+}
+
+// CSS class for a section's picture grid. An editor-chosen size wins over the default layout.
+export function galleryClass(section: Section): string {
+  const bySize: Record<string, string> = { large: " one", medium: " two", small: " three" };
+  if (section.size && bySize[section.size]) return "gal" + bySize[section.size];
+  return `gal${section.twoAcross ? " two" : ""}${section.oneAcross ? " one" : ""}`;
 }

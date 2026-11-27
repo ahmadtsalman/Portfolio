@@ -8,6 +8,7 @@
 4. Each Save is a commit to GitHub; the site redeploys automatically in about a minute.
 
 Uploaded images go into `public/`. The setup for these forms is in `.pages.yml`.
+Every section with pictures has a **Picture size** option: Default, Large (1 per row), Medium (2 per row) or Small (3 per row). Phones always show 1 per row. Extra sections (like Expansion mechanism) can have pictures too.
 Layout and design changes (fonts, colors in CSS, page structure) still need code edits.
 
 ## Editing the files directly

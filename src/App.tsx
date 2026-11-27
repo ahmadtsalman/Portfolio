@@ -9,6 +9,7 @@ import {
   hasDraft,
   projects,
   resetDraft,
+  galleryClass,
   sectionsOf,
   sheetColors,
   src,
@@ -357,7 +358,7 @@ function SheetBody({ project }: { project: Project }) {
               </div>
             )}
             {section.images && section.images.length > 0 && (
-              <div className={`gal${section.twoAcross ? " two" : ""}${section.oneAcross ? " one" : ""}`}>
+              <div className={galleryClass(section)}>
                 {section.images.map((image) => (
                   <img key={image} src={src(image)} alt="" loading="lazy" />
                 ))}
