@@ -1,0 +1,327 @@
+# Pages CMS setup: lets you edit the site's text and images in forms at https://app.pagescms.org
+# Every Save is a commit to GitHub, which redeploys the site automatically.
+# Uploaded images and files go into public/ (that folder is the root of the website).
+
+media:
+  input: public
+  output: /
+
+content:
+  # ---------------------------------------------------------------------------
+  # Home, About, Contact, Resume  (src/content/site.json)
+  # ---------------------------------------------------------------------------
+  - name: site
+    label: Site text (home, about, contact, resume)
+    type: file
+    path: src/content/site.json
+    format: json
+    fields:
+      - name: _note
+        label: Note
+        type: string
+        hidden: true
+      - name: name
+        label: Your name
+        type: string
+      - name: hero
+        label: Home page
+        type: object
+        fields:
+          - name: name
+            label: Big name lines (one per line on the home page)
+            type: string
+            list: true
+          - name: line
+            label: Line under your name
+            type: text
+      - name: about
+        label: About me
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - name: email
+            label: Email
+            type: string
+          - name: linkedin
+            label: LinkedIn link
+            type: string
+          - name: medium
+            label: Medium link
+            type: string
+      - name: hints
+        label: Short line under each category title
+        type: object
+        fields:
+          - name: engineering
+            label: Engineering
+            type: text
+          - name: design
+            label: Design
+            type: text
+          - name: prototyping
+            label: Rapid prototyping
+            type: text
+      - name: resume
+        label: Resume
+        type: object
+        fields:
+          - name: file
+            label: Resume PDF (download button)
+            type: file
+          - name: contact
+            label: Contact lines at the top
+            type: string
+            list: true
+          - name: sections
+            label: Sections
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Section title
+                type: string
+              - name: entries
+                label: Entries
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Title (left, bold)
+                    type: string
+                  - name: right
+                    label: Right side (place, dates)
+                    type: string
+                  - name: lines
+                    label: Sub-lines
+                    type: object
+                    list: true
+                    fields:
+                      - name: left
+                        label: Left
+                        type: string
+                      - name: right
+                        label: Right
+                        type: string
+                  - name: note
+                    label: Note
+                    type: text
+                  - name: bullets
+                    label: Bullet points
+                    type: text
+                    list: true
+                  - name: skills
+                    label: Skills
+                    type: object
+                    list: true
+                    fields:
+                      - name: label
+                        label: Label
+                        type: string
+                      - name: value
+                        label: Value
+                        type: text
+
+  # ---------------------------------------------------------------------------
+  # Projects, section headings, colors  (src/content/portfolio.json)
+  # ---------------------------------------------------------------------------
+  - name: portfolio
+    label: Projects
+    type: file
+    path: src/content/portfolio.json
+    format: json
+    fields:
+      - name: projects
+        label: Projects (order here = order on the site)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{t} · {cat}"
+        fields:
+          - name: id
+            label: ID (short, unique, no spaces; used in the page link)
+            type: string
+          - name: cat
+            label: Category
+            type: select
+            options:
+              values: [engineering, design, prototyping]
+          - name: t
+            label: Title
+            type: string
+          - name: m
+            label: Subtitle (term, course)
+            type: string
+          - name: hero
+            label: Cover image
+            type: image
+          - name: bg
+            label: Card background color (hex, e.g. #462025)
+            type: string
+          - name: fg
+            label: Card text color (hex)
+            type: string
+          - name: brief
+            label: Project brief
+            type: text
+          - name: tools
+            label: Tools used
+            type: string
+            list: true
+          - name: extra
+            label: Extra text sections (after tools)
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Heading
+                type: string
+              - name: text
+                label: Text
+                type: text
+          - name: sk
+            label: Sketches
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: text
+              - name: images
+                label: Images
+                type: image
+                list: true
+          - name: ide
+            label: Prototypes and documentation
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: text
+              - name: images
+                label: Images
+                type: image
+                list: true
+          - name: cad
+            label: CAD models
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: text
+              - name: images
+                label: Images
+                type: image
+                list: true
+          - name: tech
+            label: Technical drawings
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: text
+              - name: images
+                label: Images
+                type: image
+                list: true
+          - name: fin
+            label: Final project
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: text
+              - name: images
+                label: Images
+                type: image
+                list: true
+          - name: vid
+            label: Video (mp4)
+            type: file
+          - name: documents
+            label: PDF downloads
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Button label
+                type: string
+              - name: file
+                label: File
+                type: file
+          - name: secs
+            label: Custom sections (if you add any, they REPLACE all sections above)
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Heading
+                type: string
+              - name: text
+                label: Text
+                type: text
+              - name: images
+                label: Images
+                type: image
+                list: true
+      - name: sectionTitles
+        label: Section headings (apply to every project)
+        type: object
+        fields:
+          - name: brief
+            label: Brief
+            type: string
+          - name: tools
+            label: Tools
+            type: string
+          - name: sk
+            label: Sketches
+            type: string
+          - name: ide
+            label: Prototypes
+            type: string
+          - name: cad
+            label: CAD
+            type: string
+          - name: tech
+            label: Technical drawings
+            type: string
+          - name: fin
+            label: Final project
+            type: string
+          - name: vid
+            label: Video
+            type: string
+          - name: docs
+            label: Documents
+            type: string
+      - name: palette
+        label: Site colors (hex)
+        type: object
+        fields:
+          - name: Bat Wing
+            type: string
+          - name: Espresso Martini
+            type: string
+          - name: Cane Sugar
+            type: string
+          - name: Secret Passage
+            type: string

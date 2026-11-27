@@ -1,5 +1,17 @@
 # Editing your portfolio without Figma Make
 
+## Easiest: Pages CMS (forms, no code)
+
+1. Go to https://app.pagescms.org and sign in with GitHub.
+2. Open this repository. You'll see **Site text** (home, about, contact, resume) and **Projects**.
+3. Change text, upload images, add or reorder projects, then click **Save**.
+4. Each Save is a commit to GitHub; the site redeploys automatically in about a minute.
+
+Uploaded images go into `public/`. The setup for these forms is in `.pages.yml`.
+Layout and design changes (fonts, colors in CSS, page structure) still need code edits.
+
+## Editing the files directly
+
 All text lives in JSON files in `src/content/`. Open them in any editor (VS Code, GitHub's web editor, etc.).
 
 | File | What it controls |
@@ -15,3 +27,15 @@ All text lives in JSON files in `src/content/`. Open them in any editor (VS Code
 To run locally: `pnpm install` then `pnpm dev`.
 
 Project working files and notes live in `boards/` (see `boards/README.md`); they are not part of the website.
+
+## Boards view
+
+Click the "A" in your name on the home page 5 times quickly, or open `#/boards` directly (both ask for the passcode), to see every project page side by side as artboards. Click one to open it. Adding a project to `portfolio.json` makes a new board appear automatically.
+
+### Editing in the boards view
+
+In `#/boards` you can click Edit on a board to change its text, colors and image paths, use the + card to add a project, and Delete to remove one. These are a **draft saved in your browser only**. To publish: click "Download portfolio.json", replace `src/content/portfolio.json` with the downloaded file, and push. "Discard draft" returns to the published content. Image files still need to be added to `public/` yourself.
+
+### Section headings
+
+Headings such as "Sketches" and "CAD models" are now text in `src/content/portfolio.json` under `sectionTitles` (applies to every project). To rename one for a single project, add `"titles": { "sk": "Early ideas" }` to that project (keys: brief, tools, sk, ide, cad, tech, fin, vid, docs).

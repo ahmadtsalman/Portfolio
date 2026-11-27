@@ -16,10 +16,12 @@ export type Project = {
   sk: Block;
   ide: Block;
   cad: Block;
+  tech?: Block;
   fin: Block;
   vid?: string;
   documents?: { title: string; file: string }[];
   extra?: { title: string; text: string }[];
+  titles?: Partial<Record<string, string>>;
   secs?: { title: string; text?: string | null; images: string[] }[];
 };
 
@@ -31,6 +33,7 @@ export type Section = {
   video?: string;
   documents?: { title: string; file: string }[];
   twoAcross?: boolean;
+  oneAcross?: boolean;
 };
 
 export const palette = {
@@ -40,7 +43,37 @@ export const palette = {
   secret: data.palette["Secret Passage"],
 };
 
-export const projects = data.projects as unknown as Project[];
+// Draft edits made in the boards view live in this browser only (localStorage).
+// `projects` is mutated in place so every page sees the draft; the real site
+// content is still src/content/portfolio.json.
+const DRAFT_KEY = "portfolio-draft-v1";
+const baseProjects = data.projects as unknown as Project[];
+
+function loadDraft(): Project[] | null {
+  try {
+    const raw = localStorage.getItem(DRAFT_KEY);
+    return raw ? (JSON.parse(raw) as Project[]) : null;
+  } catch {
+    return null;
+  }
+}
+
+export const projects: Project[] = loadDraft() ?? [...baseProjects];
+
+export function updateProjects(next: Project[]) {
+  projects.splice(0, projects.length, ...next);
+  localStorage.setItem(DRAFT_KEY, JSON.stringify(projects));
+}
+
+export const hasDraft = () => localStorage.getItem(DRAFT_KEY) !== null;
+
+export function resetDraft() {
+  localStorage.removeItem(DRAFT_KEY);
+  projects.splice(0, projects.length, ...baseProjects);
+}
+
+export const exportJson = () =>
+  JSON.stringify({ palette: data.palette, projects }, null, 2) + "\n";
 
 export const pages = [
   { id: "home", name: "Home" },
@@ -69,29 +102,39 @@ export const sheetColors: Record<Category, [string, string]> = {
 };
 
 // Root-relative path that also works when served from a sub-path.
-export const src = (path: string) => import.meta.env.BASE_URL.replace(/\/$/, "") + path;
+// Accepts "/kit/a.jpg", "kit/a.jpg" or "//kit/a.jpg" (as editors may save them), and full URLs.
+export const src = (path: string) => {
+  if (!path) return path;
+  if (/^https?:\/\//.test(path)) return path;
+  return import.meta.env.BASE_URL.replace(/\/$/, "") + "/" + path.replace(/^\/+/, "");
+};
 
 // Sections in order; empty ones are dropped so the numbering stays continuous.
 export function sectionsOf(p: Project): Section[] {
-  if (p.secs) {
+  const defaults = data.sectionTitles as Record<string, string>;
+  const T = (key: string) => p.titles?.[key] || defaults[key];
+  if (p.secs?.length) {
     return p.secs
-      .filter((s) => s.text || s.images.length)
-      .map((s) => ({ title: s.title, text: s.text, images: s.images, twoAcross: true }));
+      .filter((s) => s.text || s.images?.length)
+      .map((s) => ({ title: s.title, text: s.text, images: s.images ?? [], twoAcross: true }));
   }
   const out: Section[] = [];
-  if (p.brief) out.push({ title: "Project brief", text: p.brief });
-  if (p.tools?.length) out.push({ title: "Tools used", chips: p.tools });
+  if (p.brief) out.push({ title: T("brief"), text: p.brief });
+  if (p.tools?.length) out.push({ title: T("tools"), chips: p.tools });
   p.extra?.forEach((e) => out.push({ title: e.title, text: e.text }));
-  const blocks: [string, Block][] = [
-    ["Sketches", p.sk],
-    ["Prototypes and documentation", p.ide],
-    ["CAD models", p.cad],
-    ["Final project", p.fin],
+  const blocks: [string, Block | undefined][] = [
+    ["sk", p.sk],
+    ["ide", p.ide],
+    ["cad", p.cad],
+    ["tech", p.tech],
+    ["fin", p.fin],
   ];
-  blocks.forEach(([title, b]) => {
-    if (b.text || b.images.length) out.push({ title, text: b.text, images: b.images });
+  blocks.forEach(([key, b]) => {
+    const title = T(key);
+    if (b && (b.text || b.images?.length))
+      out.push({ title, text: b.text, images: b.images ?? [], oneAcross: key === "tech" });
   });
-  if (p.vid) out.push({ title: "Video", video: p.vid });
-  if (p.documents?.length) out.push({ title: "Documents", documents: p.documents });
+  if (p.vid) out.push({ title: T("vid"), video: p.vid });
+  if (p.documents?.length) out.push({ title: T("docs"), documents: p.documents });
   return out;
 }

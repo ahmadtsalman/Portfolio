@@ -5,6 +5,17 @@
   "Cane Sugar": "#E8B985",
   "Secret Passage": "#302910"
  },
+ "sectionTitles": {
+  "brief": "Project brief",
+  "tools": "Tools used",
+  "sk": "Sketches",
+  "ide": "Prototypes and documentation",
+  "cad": "CAD models",
+  "tech": "Technical drawings",
+  "fin": "Final project",
+  "vid": "Video",
+  "docs": "Documents"
+ },
  "projects": [
   {
    "id": "rr",
@@ -100,8 +111,12 @@
     "text": "The technical diagram shows the peg, plunger, button, inner shell and outer shell. I designed a telescoping rod pin-lock mechanism that needs only .233 pound-force to deploy the expansion.",
     "images": [
      "/case-studies/expandable-suitcase/05-locking-mechanism.png",
-     "/case-studies/expandable-suitcase/06-shell-assembly.png",
-     "/case-studies/expandable-suitcase/07-expansion-system.png",
+     "/case-studies/expandable-suitcase/07-expansion-system.png"
+    ]
+   },
+   "tech": {
+    "text": "Fully dimensioned SolidWorks drawings of the expansion mechanism, from the full-suitcase assembly and bill of materials down to the locking pin, rod, button housing and mounts.",
+    "images": [
      "/case-studies/expandable-suitcase/drawing-full-suitcase.png",
      "/case-studies/expandable-suitcase/drawing-inner-locking-pin.png",
      "/case-studies/expandable-suitcase/drawing-inner-pin-outer-rod.png",
@@ -142,6 +157,47 @@
      "text": "The expansion mechanism was inspired by the operations of a suitcase handle. That system includes a button, button housing, and two inner and outer rods, each containing a pusher-pin mechanism and a thin metal rod. Inside the pusher-pin mechanism housing is a plunger, two springs, one vertical and one horizontal, and a metal pin with a slanted interior cut. The inner rod has holes cut outside along its vertical, large enough for the pin to stick through. The outer rod visually conceals the handle’s operation."
     }
    ]
+  },
+  {
+   "id": "ach",
+   "cat": "engineering",
+   "t": "Astronaut Coat Rack",
+   "m": "2024. 24-262",
+   "hero": "/projects/spaceship-hanger.png",
+   "brief": "The goal of this project was to create a frame that was able to hold 40 pounds and 10 pounds respectively with tight size constraints while also making it as light as possible. The theme of the project was space, as we were designing a coat rack for astronauts on Mars, where the gravitational pull was much less than Earth, causing their suits to weigh 40 pounds and their helmets 10. Our design had to be able to hold both items, ensuring that they were at least 1 inch apart. With that in mind, we were designing with the goal of a factor of safety of at least one. This was a group project where we made our designs to accomplish this task.<br><br>Later on in another course, we were tasked with the challenge of turning our hangar into a 3D model. We needed to account for the fact that there were different stresses involved in the process now.",
+   "tools": [
+    "SolidWorks",
+    "FEA"
+   ],
+   "sk": {
+    "text": "This was the prototype I designed as we were working with different design languages and potential shapes that we could use to get our desired result.",
+    "images": [
+     "/case-studies/spaceship-hanger/07.png"
+    ]
+   },
+   "ide": {
+    "text": null,
+    "images": []
+   },
+   "cad": {
+    "text": "From here we used our knowledge in SolidWorks to best iterate on this design so that we could imagine how this project would look in a 3D space, which we rendered with SolidWorks.",
+    "images": [
+     "/case-studies/spaceship-hanger/01.png",
+     "/case-studies/spaceship-hanger/03.png",
+     "/case-studies/spaceship-hanger/05.png",
+     "/case-studies/spaceship-hanger/09.png",
+     "/case-studies/spaceship-hanger/10.png",
+     "/case-studies/spaceship-hanger/11.jpg",
+     "/case-studies/spaceship-hanger/12.png",
+     "/case-studies/spaceship-hanger/13.png"
+    ]
+   },
+   "fin": {
+    "text": "By designing it in SolidWorks, we could run FEA and often got a factor of safety much less than our desired result. We wanted an FOS of 1 while still maintaining that original vision. It was then that we decided to think in terms of strengthening the existing supports to ensure that the project would still be able to hold the necessary load even in the 3D space the objects now resided in.",
+    "images": []
+   },
+   "bg": "#e6e6db",
+   "fg": "#343409"
   },
   {
    "id": "bridge",
@@ -206,51 +262,6 @@
    },
    "bg": "#3b372b",
    "fg": "#f7f0d4"
-  },
-  {
-   "id": "ach",
-   "cat": "engineering",
-   "t": "Astronaut Coat Rack",
-   "m": "2024. 24-262",
-   "hero": "/projects/spaceship-hanger.png",
-   "brief": "The goal of this project was to create a frame that was able to hold 40 pounds and 10 pounds respectively with tight size constraints while also making it as light as possible. The theme of the project was space, as we were designing a coat rack for astronauts on Mars, where the gravitational pull was much less than Earth, causing their suits to weigh 40 pounds and their helmets 10. Our design had to be able to hold both items, ensuring that they were at least 1 inch apart. With that in mind, we were designing with the goal of a factor of safety of at least one. This was a group project where we made our designs to accomplish this task.<br><br>Later on in another course, we were tasked with the challenge of turning our hangar into a 3D model. We needed to account for the fact that there were different stresses involved in the process now.",
-   "tools": [
-    "SolidWorks",
-    "FEA"
-   ],
-   "sk": {
-    "text": "This was the prototype I designed as we were working with different design languages and potential shapes that we could use to get our desired result.",
-    "images": [
-     "/case-studies/spaceship-hanger/07.png",
-     "/case-studies/spaceship-hanger/08.png"
-    ]
-   },
-   "ide": {
-    "text": null,
-    "images": []
-   },
-   "cad": {
-    "text": "From here we used our knowledge in SolidWorks to best iterate on this design so that we could imagine how this project would look in a 3D space, which we rendered with SolidWorks.",
-    "images": [
-     "/case-studies/spaceship-hanger/01.png",
-     "/case-studies/spaceship-hanger/02.png",
-     "/case-studies/spaceship-hanger/03.png",
-     "/case-studies/spaceship-hanger/04.png",
-     "/case-studies/spaceship-hanger/05.png",
-     "/case-studies/spaceship-hanger/06.png",
-     "/case-studies/spaceship-hanger/09.png",
-     "/case-studies/spaceship-hanger/10.png",
-     "/case-studies/spaceship-hanger/11.jpg",
-     "/case-studies/spaceship-hanger/12.png",
-     "/case-studies/spaceship-hanger/13.png"
-    ]
-   },
-   "fin": {
-    "text": "By designing it in SolidWorks, we could run FEA and often got a factor of safety much less than our desired result. We wanted an FOS of 1 while still maintaining that original vision. It was then that we decided to think in terms of strengthening the existing supports to ensure that the project would still be able to hold the necessary load even in the 3D space the objects now resided in.",
-    "images": []
-   },
-   "bg": "#e6e6db",
-   "fg": "#343409"
   },
   {
    "id": "nf",
@@ -487,17 +498,11 @@
     "text": "For this project I designed three potential design systems in order to see which would best represent the themes I wanted my magazine to adhere to. I would choose a color palette, limiting myself to three colors and to one of their shades, basing my design around that. I also created mood boards for each of my design systems to see just how the colors would interact if combined. This process relied heavily on me considering my intended target audience and what exactly I wanted to say about the topic I had selected to be my magazine.",
     "images": [
      "/case-studies/ux-design/01.png",
-     "/case-studies/ux-design/02.png",
      "/case-studies/ux-design/03.png",
-     "/case-studies/ux-design/04.png",
      "/case-studies/ux-design/05.png",
-     "/case-studies/ux-design/06.png",
      "/case-studies/ux-design/07.png",
-     "/case-studies/ux-design/08.png",
      "/case-studies/ux-design/09.png",
-     "/case-studies/ux-design/10.png",
-     "/case-studies/ux-design/11.png",
-     "/case-studies/ux-design/12.png"
+     "/case-studies/ux-design/11.png"
     ]
    },
    "cad": {
@@ -626,16 +631,13 @@
     "images": [
      "/case-studies/24-672-ps5/03.jpg",
      "/case-studies/24-672-ps5/04.jpg",
-     "/case-studies/24-672-ps5/05.jpg",
-     "/case-studies/24-672-ps5/10.jpg"
+     "/case-studies/24-672-ps5/05.jpg"
     ]
    },
    "ide": {
     "text": null,
     "images": [
-     "/case-studies/24-672-ps5/01.jpg",
      "/case-studies/24-672-ps5/02.jpg",
-     "/case-studies/24-672-ps5/06.jpg",
      "/case-studies/24-672-ps5/07.jpg",
      "/case-studies/24-672-ps5/09.jpg"
     ]
@@ -698,7 +700,7 @@
   {
    "id": "p3",
    "cat": "prototyping",
-   "t": "24-672 PS3",
+   "t": "Phone holder",
    "m": "2025. 24-672 PS3",
    "hero": "/projects/24-672-ps3.jpg",
    "brief": "",
@@ -718,11 +720,9 @@
     "text": "Physical models in cardboard, aluminium rods and springs tested the mechanism and the phone holding before committing to the final build in acrylic.",
     "images": [
      "/case-studies/24-672-ps3/01.jpg",
-     "/case-studies/24-672-ps3/02.jpg",
      "/case-studies/24-672-ps3/06.jpg",
      "/case-studies/24-672-ps3/07.jpg",
      "/case-studies/24-672-ps3/08.jpg",
-     "/case-studies/24-672-ps3/09.jpg",
      "/case-studies/24-672-ps3/10.jpg",
      "/case-studies/24-672-ps3/14.png",
      "/kit/s18.jpg"

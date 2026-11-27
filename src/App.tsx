@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from "react";
+import { ProjectEditor } from "./ProjectEditor";
 import site from "./content/site.json";
 import {
   blobs,
   pages,
   palette,
+  exportJson,
+  hasDraft,
   projects,
+  resetDraft,
   sectionsOf,
   sheetColors,
   src,
+  updateProjects,
   type Category,
   type Project,
 } from "./portfolio";
@@ -118,10 +123,23 @@ function Menu({ current }: { current: string }) {
 /* ---------- Pages ---------- */
 
 function Home() {
+  // Hidden: click the "A" five times in a row to open the boards view.
+  const clicks = useRef({ count: 0, last: 0 });
+  const onA = () => {
+    const now = Date.now();
+    const c = clicks.current;
+    c.count = now - c.last < 1500 ? c.count + 1 : 1;
+    c.last = now;
+    if (c.count >= 5) {
+      c.count = 0;
+      window.location.hash = "#/boards";
+    }
+  };
   return (
     <section className="page home">
       <h1>
-        {site.hero.name[0]}
+        <span onClick={onA}>{site.hero.name[0][0]}</span>
+        {site.hero.name[0].slice(1)}
         <br />
         {site.hero.name[1]}
       </h1>
@@ -284,10 +302,12 @@ function Contact() {
 
 /* ---------- Project sheet ---------- */
 
+const colorsOf = (project: Project) =>
+  project.bg && project.fg ? [project.bg, project.fg] : sheetColors[project.cat];
+
 function Sheet({ project }: { project: Project }) {
   // Background and text colors come from the project's own cover image.
-  const [bg, fg] = project.bg && project.fg ? [project.bg, project.fg] : sheetColors[project.cat];
-  const sections = sectionsOf(project);
+  const [bg, fg] = colorsOf(project);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -307,6 +327,16 @@ function Sheet({ project }: { project: Project }) {
         <a className="back" href={`#/${project.cat}`}>
           Back
         </a>
+        <SheetBody project={project} />
+      </div>
+    </article>
+  );
+}
+
+function SheetBody({ project }: { project: Project }) {
+  const sections = sectionsOf(project);
+  return (
+    <>
         <h1>{project.t}</h1>
         {project.m && <p className="sub">{project.m}</p>}
         {project.hero && <img className="sheet-hero" src={src(project.hero)} alt={project.t} />}
@@ -327,7 +357,7 @@ function Sheet({ project }: { project: Project }) {
               </div>
             )}
             {section.images && section.images.length > 0 && (
-              <div className={`gal${section.twoAcross ? " two" : ""}`}>
+              <div className={`gal${section.twoAcross ? " two" : ""}${section.oneAcross ? " one" : ""}`}>
                 {section.images.map((image) => (
                   <img key={image} src={src(image)} alt="" loading="lazy" />
                 ))}
@@ -352,8 +382,163 @@ function Sheet({ project }: { project: Project }) {
             )}
           </section>
         ))}
+    </>
+  );
+}
+
+/* ---------- Boards: every project page side by side ---------- */
+
+function BoardsInner() {
+  const [list, setList] = useState<Project[]>([...projects]);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [draft, setDraft] = useState(hasDraft());
+
+  const commit = (next: Project[]) => {
+    updateProjects(next);
+    setList([...next]);
+    setDraft(true);
+  };
+  const add = (cat: Category) => {
+    const id = `new-${Date.now().toString(36)}`;
+    const blank = { text: null, images: [] };
+    commit([
+      ...list,
+      { id, cat, t: "New project", m: "", hero: null, brief: "", tools: [], sk: blank, ide: blank, cad: blank, fin: blank },
+    ]);
+    setEditingId(id);
+  };
+  const remove = (project: Project) => {
+    if (!window.confirm(`Delete "${project.t}"?`)) return;
+    commit(list.filter((item) => item.id !== project.id));
+    if (editingId === project.id) setEditingId(null);
+  };
+  const download = () => {
+    const url = URL.createObjectURL(new Blob([exportJson()], { type: "application/json" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "portfolio.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+  const reset = () => {
+    if (!window.confirm("Discard all draft edits and go back to the published content?")) return;
+    resetDraft();
+    setList([...projects]);
+    setEditingId(null);
+    setDraft(false);
+  };
+  const editing = list.find((item) => item.id === editingId);
+
+  return (
+    <section className={`boards${editing ? " has-editor" : ""}`}>
+      <h2>Boards</h2>
+      <p>
+        Edit, add or delete project pages here. Changes are a draft saved in this browser only. To
+        publish them, download portfolio.json, replace src/content/portfolio.json with it, and push.
+      </p>
+      <div className="boards-bar">
+        <button type="button" onClick={download}>Download portfolio.json</button>
+        {draft && <button type="button" onClick={reset}>Discard draft</button>}
+        {draft && <em>Draft: not published yet</em>}
       </div>
-    </article>
+      {categories.map((cat) => (
+        <div key={cat}>
+          <h3 className="boards-cat">{pageName(cat)}</h3>
+          <div className="boards-row">
+            {list
+              .filter((project) => project.cat === cat)
+              .map((project) => {
+                const [bg, fg] = colorsOf(project);
+                return (
+                  <div className={`board${project.id === editingId ? " active" : ""}`} key={project.id}>
+                    <div className="board-top">
+                      <span className="board-label">{project.t}</span>
+                      <button type="button" onClick={() => setEditingId(project.id)}>Edit</button>
+                      <button type="button" aria-label={`Delete ${project.t}`} onClick={() => remove(project)}>Delete</button>
+                    </div>
+                    <a href={`#/project/${project.id}`}>
+                      <div className="board-frame">
+                        <div
+                          className="board-page"
+                          style={{ background: bg, color: fg, "--ink": fg, "--sbg": bg } as React.CSSProperties}
+                        >
+                          <div className="sheet-inner">
+                            <SheetBody project={project} />
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                );
+              })}
+            <button type="button" className="board-add" onClick={() => add(cat)} aria-label={`Add ${pageName(cat)} project`}>
+              <span>+</span>
+            </button>
+          </div>
+        </div>
+      ))}
+      {editing && (
+        <ProjectEditor
+          key={editing.id}
+          project={editing}
+          onClose={() => setEditingId(null)}
+          onChange={(next) => commit(list.map((item) => (item.id === editing.id ? next : item)))}
+        />
+      )}
+    </section>
+  );
+}
+
+/* ---------- Passcode gate for the boards view ---------- */
+
+// SHA-256 of the passcode. This only deters casual visitors: the site is static,
+// so anyone determined could still read the code. Do not reuse a real password.
+const PASS_HASH = "7e9f0efca3b6a4cbc4e293b0e6d6c3dbeed38e1256391154491f726e47484cb5";
+
+async function sha256(text: string) {
+  const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return [...new Uint8Array(bytes)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function Boards() {
+  const [ok, setOk] = useState(sessionStorage.getItem("boards-ok") === "1");
+  const [value, setValue] = useState("");
+  const [wrong, setWrong] = useState(false);
+
+  if (ok) return <BoardsInner />;
+
+  const submit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if ((await sha256(value)) === PASS_HASH) {
+      sessionStorage.setItem("boards-ok", "1");
+      setOk(true);
+    } else {
+      setWrong(true);
+      setValue("");
+    }
+  };
+
+  return (
+    <section className="boards gate">
+      <h2>Boards</h2>
+      <form onSubmit={submit}>
+        <input
+          type="password"
+          inputMode="numeric"
+          autoFocus
+          autoComplete="off"
+          aria-label="Passcode"
+          placeholder="Passcode"
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+            setWrong(false);
+          }}
+        />
+        <button type="submit">Enter</button>
+        {wrong && <p role="alert">Wrong passcode.</p>}
+      </form>
+    </section>
   );
 }
 
@@ -373,7 +558,9 @@ export default function App() {
   const routeId = hash.replace(/^#\//, "");
   const page = project
     ? project.cat
-    : pages.some((item) => item.id === routeId)
+    : routeId === "boards"
+      ? "boards"
+      : pages.some((item) => item.id === routeId)
       ? routeId
       : "home";
 
@@ -394,6 +581,7 @@ export default function App() {
         {page === "about" && <About />}
         {categories.includes(page as Category) && <CategoryPage id={page as Category} />}
         {page === "contact" && <Contact />}
+        {page === "boards" && <Boards />}
       </main>
       {project && <Sheet project={project} />}
     </>
