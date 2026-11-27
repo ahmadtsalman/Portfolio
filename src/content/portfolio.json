@@ -31,7 +31,7 @@
         "images": [
           "/case-studies/red-rover/03.png",
           "/case-studies/red-rover/14.jpg",
-          "/Ahmad S Personal Portfolio Presentation.png"
+          "/case-studies/red-rover/13.jpg"
         ]
       },
       "cad": {
@@ -48,7 +48,6 @@
       "fin": {
         "text": "The final models: the conveyor belt, the load body and the rover frame. It took over 100 lines of code to make the RC car intuitive for people who have never driven one, and the conveyor and base were programmed in Python for activation. Load capacity was verified at 50 pounds using ANSYS.",
         "images": [
-          "/Ahmad S Personal Portfolio Presentation (3).png",
           "/case-studies/red-rover/15.jpg",
           "/case-studies/red-rover/16.jpg"
         ],
