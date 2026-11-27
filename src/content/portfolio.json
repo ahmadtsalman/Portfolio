@@ -575,7 +575,7 @@
       "cat": "prototyping",
       "t": "Phone holder",
       "m": "2025. 24-672 PS3",
-      "hero": "/projects/24-672-ps3.jpg",
+      "hero": "/final phone stand.png",
       "bg": "#edd6c0",
       "fg": "#341c09",
       "sk": {
@@ -601,8 +601,10 @@
       },
       "fin": {
         "images": [
-          "/final phone stand.png"
-        ]
+          "/final phone stand.png",
+          "/case-studies/24-672-ps3/06.jpg"
+        ],
+        "size": "medium"
       }
     },
     {
