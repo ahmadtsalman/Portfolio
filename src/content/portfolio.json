@@ -29,10 +29,9 @@
       "ide": {
         "text": "Version 1.0 was four autonomous wheels using RFID to follow the user and an IR scanner to map a room, acting as a platform for people with joint issues. It was too much for our two-month timeline, so we pivoted to a remote-controlled rover with manual options to pick up objects that would stress a user's joints. Version 2 became an RC car with a conveyor belt and built-in ramp, working like a drawbridge to take in and deposit objects upwards of 50 pounds. The platform carries the most stress, so we modeled it as a plate under a uniform load and aimed for a factor of safety of 3. We moved the conveyor's support to the sides with divets and a pulley system, and made the RC car's wheels more shock absorbent so delicate items survive intake and drop-off.",
         "images": [
-          "/case-studies/red-rover/01.png",
-          "/case-studies/red-rover/02.png",
           "/case-studies/red-rover/03.png",
-          "/case-studies/red-rover/13.jpg"
+          "/case-studies/red-rover/14.jpg",
+          "/Ahmad S Personal Portfolio Presentation.png"
         ]
       },
       "cad": {
@@ -42,16 +41,18 @@
           "/case-studies/red-rover/09.jpg",
           "/case-studies/red-rover/10.jpg",
           "/case-studies/red-rover/11.jpg",
-          "/case-studies/red-rover/12.jpg"
+          "/Ahmad S Personal Portfolio Presentation (1).png",
+          "/Ahmad S Personal Portfolio Presentation (2).png"
         ]
       },
       "fin": {
         "text": "The final models: the conveyor belt, the load body and the rover frame. It took over 100 lines of code to make the RC car intuitive for people who have never driven one, and the conveyor and base were programmed in Python for activation. Load capacity was verified at 50 pounds using ANSYS.",
         "images": [
-          "/case-studies/red-rover/14.jpg",
+          "/Ahmad S Personal Portfolio Presentation (3).png",
           "/case-studies/red-rover/15.jpg",
           "/case-studies/red-rover/16.jpg"
-        ]
+        ],
+        "size": "small"
       }
     },
     {
